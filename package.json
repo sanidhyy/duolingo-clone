@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.9",
+    "@neondatabase/serverless": "^0.9.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "drizzle-orm": "^0.30.4",
     "lucide-react": "^0.359.0",
     "next": "14.1.4",
     "react": "^18",
