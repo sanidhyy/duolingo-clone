@@ -2,6 +2,7 @@ import { InfinityIcon, X } from "lucide-react";
 import Image from "next/image";
 
 import { Progress } from "@/components/ui/progress";
+import { useExitModal } from "@/store/use-exit-modal";
 
 type HeaderProps = {
   hearts: number;
@@ -14,10 +15,12 @@ export const Header = ({
   percentage,
   hasActiveSubscription,
 }: HeaderProps) => {
+  const { open } = useExitModal();
+
   return (
     <header className="lg:pt-[50px] pt-[20px] px-10 flex gap-x-7 items-center justify-between max-w-[1140px] mx-auto w-full">
       <X
-        onClick={() => {}} // TODO: Add onClick exit
+        onClick={open}
         className="text-slate-500 hover:opacity-75 transition cursor-pointer"
       />
 
