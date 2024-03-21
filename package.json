@@ -26,6 +26,7 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-circular-progressbar": "^2.1.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18",
     "react-use": "^17.5.0",
     "sonner": "^1.4.32",
