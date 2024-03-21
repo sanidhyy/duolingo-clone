@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 
 import { ExitModal } from "@/components/modals/exit-modal";
+import { HeartsModal } from "@/components/modals/hearts-modal";
 import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
@@ -25,6 +26,7 @@ export default function RootLayout({
         <body className={font.className}>
           <Toaster theme="light" richColors closeButton />
           <ExitModal />
+          <HeartsModal />
           {children}
         </body>
       </html>
