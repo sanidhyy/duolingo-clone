@@ -24,6 +24,7 @@
     "next": "14.1.4",
     "next-themes": "^0.3.0",
     "react": "^18",
+    "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
     "sonner": "^1.4.32",
     "tailwind-merge": "^2.2.2",
