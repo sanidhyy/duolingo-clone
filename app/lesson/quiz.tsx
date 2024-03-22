@@ -43,7 +43,9 @@ export const Quiz = ({
   initialLessonChallenges,
   userSubscription,
 }: QuizProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [correctAudio, _c, correctControls] = useAudio({ src: "/correct.wav" });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [incorrectAudio, _i, incorrectControls] = useAudio({
     src: "/incorrect.wav",
   });
@@ -121,7 +123,7 @@ export const Quiz = ({
               return;
             }
 
-            correctControls.play();
+            void correctControls.play();
             setStatus("correct");
             setPercentage((prev) => prev + 100 / challenges.length);
 
@@ -141,7 +143,7 @@ export const Quiz = ({
               return;
             }
 
-            incorrectControls.play();
+            void incorrectControls.play();
             setStatus("wrong");
 
             if (!response?.error) setHearts((prev) => Math.max(prev - 1, 0));

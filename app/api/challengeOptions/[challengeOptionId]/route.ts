@@ -26,7 +26,7 @@ export const PUT = async (
   const isAdmin = getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
-  const body = await req.json();
+  const body = (await req.json()) as typeof challengeOptions.$inferSelect;
   const data = await db
     .update(challengeOptions)
     .set({
