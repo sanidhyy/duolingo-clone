@@ -1,8 +1,8 @@
+import { InfinityIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { InfinityIcon } from "lucide-react";
 import { courses } from "@/db/schema";
 
 type UserProgressProps = {

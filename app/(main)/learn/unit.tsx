@@ -1,7 +1,7 @@
 import { lessons, units } from "@/db/schema";
 
-import { UnitBanner } from "./unit-banner";
 import { LessonButton } from "./lesson-button";
+import { UnitBanner } from "./unit-banner";
 
 type UnitProps = {
   id: number;

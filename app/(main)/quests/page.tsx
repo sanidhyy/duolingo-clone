@@ -6,8 +6,8 @@ import { Promo } from "@/components/promo";
 import { StickyWrapper } from "@/components/sticky-wrapper";
 import { Progress } from "@/components/ui/progress";
 import { UserProgress } from "@/components/user-progress";
-import { getUserProgress, getUserSubscription } from "@/db/queries";
 import { QUESTS } from "@/constants";
+import { getUserProgress, getUserSubscription } from "@/db/queries";
 
 const QuestsPage = async () => {
   const userProgressData = getUserProgress();

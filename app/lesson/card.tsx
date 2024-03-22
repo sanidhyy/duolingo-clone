@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { useCallback } from "react";
+
+import Image from "next/image";
 import { useAudio, useKey } from "react-use";
 
 import { challenges } from "@/db/schema";

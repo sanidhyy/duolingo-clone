@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useTransition } from "react";
+
+import Image from "next/image";
 import { toast } from "sonner";
 
 import { refillHearts } from "@/actions/user-progress";
