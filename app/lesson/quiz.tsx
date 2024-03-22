@@ -9,6 +9,7 @@ import { toast } from "sonner";
 
 import { upsertChallengeProgress } from "@/actions/challenge-progress";
 import { reduceHearts } from "@/actions/user-progress";
+import { MAX_HEARTS } from "@/constants";
 import { challengeOptions, challenges, userSubscription } from "@/db/schema";
 import { useHeartsModal } from "@/store/use-hearts-modal";
 import { usePracticeModal } from "@/store/use-practice-modal";
@@ -125,7 +126,7 @@ export const Quiz = ({
 
             // This is a practice
             if (initialPercentage === 100) {
-              setHearts((prev) => Math.min(prev + 1, 5));
+              setHearts((prev) => Math.min(prev + 1, MAX_HEARTS));
             }
           })
           .catch(() => toast.error("Something went wrong. Please try again."));

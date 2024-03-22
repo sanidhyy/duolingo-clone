@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { refillHearts } from "@/actions/user-progress";
 import { createStripeUrl } from "@/actions/user-subscription";
 import { Button } from "@/components/ui/button";
-import { POINTS_TO_REFILL } from "@/constants";
+import { MAX_HEARTS, POINTS_TO_REFILL } from "@/constants";
 
 type ItemsProps = {
   hearts: number;
@@ -23,7 +23,7 @@ export const Items = ({
   const [pending, startTransition] = useTransition();
 
   const onRefillHearts = () => {
-    if (pending || hearts === 5 || points < POINTS_TO_REFILL) return;
+    if (pending || hearts === MAX_HEARTS || points < POINTS_TO_REFILL) return;
 
     startTransition(() => {
       refillHearts().catch(() => toast.error("Something went wrong."));
@@ -54,10 +54,14 @@ export const Items = ({
 
         <Button
           onClick={onRefillHearts}
-          disabled={pending || hearts === 5 || points < POINTS_TO_REFILL}
-          aria-disabled={pending || hearts === 5 || points < POINTS_TO_REFILL}
+          disabled={
+            pending || hearts === MAX_HEARTS || points < POINTS_TO_REFILL
+          }
+          aria-disabled={
+            pending || hearts === MAX_HEARTS || points < POINTS_TO_REFILL
+          }
         >
-          {hearts === 5 ? (
+          {hearts === MAX_HEARTS ? (
             "full"
           ) : (
             <div className="flex items-center">
