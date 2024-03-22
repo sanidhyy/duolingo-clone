@@ -9,6 +9,9 @@ declare global {
 
       // stripe api key
       STRIPE_API_SECRET_KEY: string;
+
+      // public app url
+      NEXT_PUBLIC_APP_URL: string;
     }
   }
 }
