@@ -33,7 +33,6 @@ const ShopPage = async () => {
           hasActiveSubscription={isPro}
         />
 
-        {!isPro && <Promo />}
         <Quests points={userProgress.points} />
       </StickyWrapper>
 
