@@ -5,6 +5,7 @@ import { and, eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
+import { POINTS_TO_REFILL } from "@/constants";
 import db from "@/db/drizzle";
 import {
   getCourseById,
@@ -12,9 +13,6 @@ import {
   getUserSubscription,
 } from "@/db/queries";
 import { challengeProgress, challenges, userProgress } from "@/db/schema";
-
-// TODO: Move alongside items to constants file
-const POINTS_TO_REFILL = 10;
 
 export const upsertUserProgress = async (courseId: number) => {
   const { userId } = auth();
