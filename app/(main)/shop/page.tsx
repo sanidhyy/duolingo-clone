@@ -37,13 +37,13 @@ const ShopPage = async () => {
       </StickyWrapper>
 
       <FeedWrapper>
-        <div className="w-full flex flex-col items-center">
+        <div className="flex w-full flex-col items-center">
           <Image src="/shop.svg" alt="Shop" height={90} width={90} />
 
-          <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
+          <h1 className="my-6 text-center text-2xl font-bold text-neutral-800">
             Shop
           </h1>
-          <p className="text-muted-foreground text-center text-lg mb-6">
+          <p className="mb-6 text-center text-lg text-muted-foreground">
             Spend your points on cool stuff.
           </p>
 

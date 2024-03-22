@@ -23,22 +23,22 @@ export const Footer = ({
   return (
     <footer
       className={cn(
-        "lg:h-[140px] h-[100px] border-t-2",
+        "h-[100px] border-t-2 lg:h-[140px]",
         status === "correct" && "border-transparent bg-green-100",
         status === "wrong" && "border-transparent bg-rose-100"
       )}
     >
-      <div className="max-w-[1140px] h-full mx-auto flex items-center justify-between px-6 lg:px-10">
+      <div className="mx-auto flex h-full max-w-[1140px] items-center justify-between px-6 lg:px-10">
         {status === "correct" && (
-          <div className="text-green-500 font-bold text-base lg:text-2xl flex items-center">
-            <CheckCircle className="h-6 w-6 lg:h-10 lg:w-10 mr-4" />
+          <div className="flex items-center text-base font-bold text-green-500 lg:text-2xl">
+            <CheckCircle className="mr-4 h-6 w-6 lg:h-10 lg:w-10" />
             Nicely done!
           </div>
         )}
 
         {status === "wrong" && (
-          <div className="text-rose-500 font-bold text-base lg:text-2xl flex items-center">
-            <XCircle className="h-6 w-6 lg:h-10 lg:w-10 mr-4" />
+          <div className="flex items-center text-base font-bold text-rose-500 lg:text-2xl">
+            <XCircle className="mr-4 h-6 w-6 lg:h-10 lg:w-10" />
             Try again.
           </div>
         )}

@@ -32,7 +32,7 @@ export const Unit = ({
     <>
       <UnitBanner title={title} description={description} />
 
-      <div className="flex items-center flex-col relative">
+      <div className="relative flex flex-col items-center">
         {lessons.map((lesson, i) => {
           const isCurrent = lesson.id === activeLesson?.id;
           const isLocked = !lesson.completed && !isCurrent;

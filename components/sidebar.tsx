@@ -15,21 +15,21 @@ export const Sidebar = ({ className }: SidebarProps) => {
   return (
     <div
       className={cn(
-        "h-full lg:w-[256px] lg:fixed flex left-0 top-0 px-4 border-r-2 flex-col",
+        "left-0 top-0 flex h-full flex-col border-r-2 px-4 lg:fixed lg:w-[256px]",
         className
       )}
     >
       <Link href="/learn">
-        <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
+        <div className="flex items-center gap-x-3 pb-7 pl-4 pt-8">
           <Image src="/mascot.svg" alt="Mascot" height={40} width={40} />
 
-          <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
+          <h1 className="text-2xl font-extrabold tracking-wide text-green-600">
             Lingo
           </h1>
         </div>
       </Link>
 
-      <div className="flex flex-col gap-y-2 flex-1">
+      <div className="flex flex-1 flex-col gap-y-2">
         <SidebarItem label="Learn" href="/learn" iconSrc="/learn.svg" />
         <SidebarItem
           label="Leaderboard"
@@ -42,7 +42,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
       <div className="p-4">
         <ClerkLoading>
-          <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
+          <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
         </ClerkLoading>
 
         <ClerkLoaded>

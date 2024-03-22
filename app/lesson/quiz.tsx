@@ -161,7 +161,7 @@ export const Quiz = ({
           width={width}
           height={height}
         />
-        <div className="flex flex-col gap-y-4 lg:gap-y-8 max-w-lg mx-auto text-center items-center justify-center h-full">
+        <div className="mx-auto flex h-full max-w-lg flex-col items-center justify-center gap-y-4 text-center lg:gap-y-8">
           <Image
             src="/finish.svg"
             alt="Finish"
@@ -178,11 +178,11 @@ export const Quiz = ({
             width={100}
           />
 
-          <h1 className="text-lg lg:text-3xl font-bold text-neutral-700">
+          <h1 className="text-lg font-bold text-neutral-700 lg:text-3xl">
             Great job! <br /> You&apos;ve completed the lesson.
           </h1>
 
-          <div className="flex items-center gap-x-4 w-full">
+          <div className="flex w-full items-center gap-x-4">
             <ResultCard variant="points" value={challenges.length * 10} />
             <ResultCard
               variant="hearts"
@@ -216,9 +216,9 @@ export const Quiz = ({
       />
 
       <div className="flex-1">
-        <div className="h-full flex items-center justify-center">
-          <div className="lg:min-h-[350px] lg:w-[600px] w-full px-6 lg:px-0 flex flex-col gap-y-12">
-            <h1 className="text-lg lg:text-3xl text-center lg:text-start font-bold text-neutral-700">
+        <div className="flex h-full items-center justify-center">
+          <div className="flex w-full flex-col gap-y-12 px-6 lg:min-h-[350px] lg:w-[600px] lg:px-0">
+            <h1 className="text-center text-lg font-bold text-neutral-700 lg:text-start lg:text-3xl">
               {title}
             </h1>
 

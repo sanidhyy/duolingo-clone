@@ -28,7 +28,7 @@ export const ExitModal = () => {
     <Dialog open={isOpen} onOpenChange={close}>
       <DialogContent className="max-w-md">
         <DialogHeader>
-          <div className="flex items-center w-full justify-center mb-5">
+          <div className="mb-5 flex w-full items-center justify-center">
             <Image
               src="/mascot_sad.svg"
               alt="Mascot Sad"
@@ -37,7 +37,7 @@ export const ExitModal = () => {
             />
           </div>
 
-          <DialogTitle className="text-center font-bold text-2xl">
+          <DialogTitle className="text-center text-2xl font-bold">
             Wait, don&apos;t go!
           </DialogTitle>
 
@@ -47,7 +47,7 @@ export const ExitModal = () => {
         </DialogHeader>
 
         <DialogFooter className="mb-4">
-          <div className="flex flex-col gap-y-4 w-full">
+          <div className="flex w-full flex-col gap-y-4">
             <Button
               variant="primary"
               className="w-full"
