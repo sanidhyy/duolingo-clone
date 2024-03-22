@@ -183,7 +183,10 @@ export const Quiz = ({
 
           <div className="flex items-center gap-x-4 w-full">
             <ResultCard variant="points" value={challenges.length * 10} />
-            <ResultCard variant="hearts" value={hearts} />
+            <ResultCard
+              variant="hearts"
+              value={userSubscription?.isActive ? Infinity : hearts}
+            />
           </div>
         </div>
 
