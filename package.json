@@ -30,6 +30,7 @@
     "react-dom": "^18",
     "react-use": "^17.5.0",
     "sonner": "^1.4.32",
+    "stripe": "^14.22.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.5.2"
