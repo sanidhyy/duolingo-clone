@@ -6,6 +6,9 @@ declare global {
     interface ProcessEnv {
       // neon db uri
       DATABASE_URL: string;
+
+      // stripe api key
+      STRIPE_API_SECRET_KEY: string;
     }
   }
 }
