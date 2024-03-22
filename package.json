@@ -10,6 +10,7 @@
     "db:studio": "npx drizzle-kit studio",
     "db:push": "npx drizzle-kit push:pg",
     "db:seed": "tsx ./scripts/seed.ts",
+    "db:prod": "tsx ./scripts/prod.ts",
     "db:reset": "tsx ./scripts/reset.ts"
   },
   "dependencies": {
