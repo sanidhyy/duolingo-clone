@@ -3,6 +3,8 @@ import { redirect } from "next/navigation";
 
 import { FeedWrapper } from "@/components/feed-wrapper";
 import { StickyWrapper } from "@/components/sticky-wrapper";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Separator } from "@/components/ui/separator";
 import { UserProgress } from "@/components/user-progress";
 import {
   getTopTenUsers,
@@ -52,9 +54,25 @@ const LeaderboardPage = async () => {
             See where you stand among other learners in the community.
           </p>
 
+          <Separator className="mb-4 h-0.5 rounded-full" />
           {leaderboard.map((userProgress, i) => (
-            <div key={userProgress.userId} className="">
-              {userProgress.userName}
+            <div
+              key={userProgress.userId}
+              className="flex items-center w-full p-2 px-4 rounded-xl hover:bg-gray-200/50"
+            >
+              <p className="font-bold text-lime-700 mr-4">{i + 1}</p>
+
+              <Avatar className="border bg-green-500 h-12 w-12 ml-3 mr-6">
+                <AvatarImage
+                  src={userProgress.userImageSrc}
+                  className="object-cover"
+                />
+              </Avatar>
+
+              <p className="font-bold text-neutral-800 flex-1">
+                {userProgress.userName}
+              </p>
+              <p className="text-muted-foreground">{userProgress.points} XP</p>
             </div>
           ))}
         </div>
