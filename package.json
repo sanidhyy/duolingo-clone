@@ -11,9 +11,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "db:studio": "npx drizzle-kit studio",
     "db:push": "npx drizzle-kit push:pg",
-    "db:seed": "tsx ./scripts/seed.ts",
-    "db:prod": "tsx ./scripts/prod.ts",
-    "db:reset": "tsx ./scripts/reset.ts"
+    "db:prod": "tsx ./scripts/prod.ts"
   },
   "author": {
     "name": "Sanidhya Kumar Verma",
