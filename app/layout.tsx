@@ -1,5 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
 
 import { ExitModal } from "@/components/modals/exit-modal";
@@ -11,6 +11,10 @@ import { siteConfig } from "@/config";
 import "./globals.css";
 
 const font = Nunito({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  themeColor: "#22C55E",
+};
 
 export const metadata: Metadata = siteConfig;
 
