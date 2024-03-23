@@ -24,7 +24,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        layout: {
+          logoImageUrl: "/favicon.ico",
+        },
+        variables: {
+          colorPrimary: "#22C55E",
+        },
+      }}
+    >
       <html lang="en">
         <body className={font.className}>
           <Toaster theme="light" richColors closeButton />
