@@ -222,7 +222,7 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx, user_xxxxxxxxxxxxxxxxxxxxxx
 
 10. Save and Secure:
 
-    - Save the changes to the `.env.local` file.
+    - Save the changes to the `.env` file.
 
 11. Install Project Dependencies using `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
 
