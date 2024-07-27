@@ -268,7 +268,6 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 Useful resources and dependencies that are used in Lingo.
 
-- Thanks to CodeWithAntonio: https://codewithantonio.com/
 - Special Thanks to Kenney Assets: https://kenney.nl/
 - Freesound: https://freesound.org/
 - Elevenlabs AI: https://elevenlabs.io/
