@@ -231,7 +231,7 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx, user_xxxxxxxxxxxxxxxxxxxxxx
 In the same terminal, run the following command to execute the seed script:
 
 ```bash
-npm run db:prod
+npm run db:push && npm run db:prod
 ```
 
 This command uses `npm` to execute the Typescript file (`scripts/prod.ts`) and writes challenges data in database.
