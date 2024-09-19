@@ -9,14 +9,11 @@ export const siteConfig: Metadata = {
     "nextjs",
     "vercel",
     "react",
-    "duolingo-clone",
-    "learn-language",
     "shadcn",
     "shadcn-ui",
     "radix-ui",
     "cn",
     "clsx",
-    "lingo",
     "postgresql",
     "sonner",
     "drizzle",
@@ -39,8 +36,4 @@ export const siteConfig: Metadata = {
     "html",
     "css",
   ] as Array<string>,
-  authors: {
-    name: "Sanidhya Kumar Verma",
-    url: "https://github.com/sanidhyy",
-  },
 } as const;
