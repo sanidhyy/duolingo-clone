@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const siteConfig: Metadata = {
   title: "YidiOS",
   description:
-    "Interactive platform for language learning with lessons, quizzes, and progress tracking.",
+    "Interactive platform for learning with lessons, quizzes, and progress tracking.",
   keywords: [
     "reactjs",
     "nextjs",

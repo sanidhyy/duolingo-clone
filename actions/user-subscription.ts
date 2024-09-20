@@ -37,7 +37,7 @@ export const createStripeUrl = async () => {
         price_data: {
           currency: "USD",
           product_data: {
-            name: "Lingo Pro",
+            name: "YidiOS Pro",
             description: "Unlimited hearts.",
           },
           unit_amount: 2000, // $20.00 USD
