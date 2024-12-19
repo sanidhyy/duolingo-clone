@@ -87,7 +87,7 @@
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.4",
     "lucide-react": "^0.359.0",
-    "next": "14.2.13",
+    "next": "14.2.21",
     "next-themes": "^0.3.0",
     "ra-data-simple-rest": "^4.16.12",
     "react": "^18",
