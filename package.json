@@ -89,7 +89,7 @@
     "lucide-react": "^0.359.0",
     "next": "^14.2.30",
     "next-themes": "^0.3.0",
-    "ra-data-simple-rest": "^4.16.12",
+    "ra-data-simple-rest": "^5.8.4",
     "react": "^18",
     "react-admin": "^5.8.4",
     "react-circular-progressbar": "^2.1.0",
