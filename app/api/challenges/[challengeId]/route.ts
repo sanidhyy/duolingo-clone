@@ -9,7 +9,7 @@ export const GET = async (
   _req: NextRequest,
   { params }: { params: { challengeId: number } }
 ) => {
-  const isAdmin = getIsAdmin();
+  const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
   const data = await db.query.challenges.findFirst({
@@ -23,7 +23,7 @@ export const PUT = async (
   req: NextRequest,
   { params }: { params: { challengeId: number } }
 ) => {
-  const isAdmin = getIsAdmin();
+  const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
   const body = (await req.json()) as typeof challenges.$inferSelect;
@@ -42,7 +42,7 @@ export const DELETE = async (
   _req: NextRequest,
   { params }: { params: { challengeId: number } }
 ) => {
-  const isAdmin = getIsAdmin();
+  const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
   const data = await db
