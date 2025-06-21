@@ -33,6 +33,7 @@ export default function RootLayout({
           colorPrimary: "#22C55E",
         },
       }}
+      afterSignOutUrl="/"
     >
       <html lang="en">
         <body className={font.className}>

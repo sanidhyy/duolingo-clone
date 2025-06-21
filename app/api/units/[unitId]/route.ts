@@ -9,7 +9,7 @@ export const GET = async (
   _req: NextRequest,
   { params }: { params: { unitId: number } }
 ) => {
-  const isAdmin = getIsAdmin();
+  const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
   const data = await db.query.units.findFirst({
@@ -23,7 +23,7 @@ export const PUT = async (
   req: NextRequest,
   { params }: { params: { unitId: number } }
 ) => {
-  const isAdmin = getIsAdmin();
+  const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
   const body = (await req.json()) as typeof units.$inferSelect;
@@ -42,7 +42,7 @@ export const DELETE = async (
   _req: NextRequest,
   { params }: { params: { unitId: number } }
 ) => {
-  const isAdmin = getIsAdmin();
+  const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
   const data = await db

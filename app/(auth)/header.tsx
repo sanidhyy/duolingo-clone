@@ -5,9 +5,7 @@ import {
   ClerkLoaded,
   ClerkLoading,
   SignInButton,
-  SignedIn,
   SignedOut,
-  UserButton,
   useAuth,
 } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
@@ -47,12 +45,8 @@ export const Header = () => {
               <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
             </ClerkLoading>
             <ClerkLoaded>
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
-
               <SignedOut>
-                <SignInButton mode="modal">
+                <SignInButton>
                   <Button size="lg" variant="ghost">
                     Login
                   </Button>
