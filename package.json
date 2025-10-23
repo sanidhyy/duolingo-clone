@@ -91,7 +91,7 @@
     "next-themes": "^0.3.0",
     "ra-data-simple-rest": "^5.8.4",
     "react": "^18",
-    "react-admin": "^5.8.4",
+    "react-admin": "^4.16.20",
     "react-circular-progressbar": "^2.1.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18",
