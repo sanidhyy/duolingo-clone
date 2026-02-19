@@ -95,7 +95,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18",
-    "react-use": "^17.5.0",
+    "react-use": "^17.6.0",
     "sonner": "^1.4.32",
     "stripe": "^20.3.1",
     "tailwind-merge": "^2.2.2",
