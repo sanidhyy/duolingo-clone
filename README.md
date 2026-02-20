@@ -270,6 +270,48 @@ Useful resources and dependencies that are used in Lingo.
 - Flagpack: https://flagpack.xyz/
 
 <!-- DEPENDENCIES_START -->
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^6.38.0
+- [@eslint/eslintrc](https://www.npmjs.com/package/@eslint/eslintrc): ^3
+- [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^1.0.2
+- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.1.11
+- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.1.15
+- [@radix-ui/react-progress](https://www.npmjs.com/package/@radix-ui/react-progress): ^1.1.8
+- [@radix-ui/react-separator](https://www.npmjs.com/package/@radix-ui/react-separator): ^1.1.8
+- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
+- [@types/node](https://www.npmjs.com/package/@types/node): ^25.3.0
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.14
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.3
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.24
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
+- [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
+- [dotenv](https://www.npmjs.com/package/dotenv): ^17.3.1
+- [drizzle-kit](https://www.npmjs.com/package/drizzle-kit): ^0.31.9
+- [drizzle-orm](https://www.npmjs.com/package/drizzle-orm): ^0.45.1
+- [eslint](https://www.npmjs.com/package/eslint): ^9
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 15.5.10
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^9.1.0
+- [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.575.0
+- [next](https://www.npmjs.com/package/next): ^15.5.10
+- [pg](https://www.npmjs.com/package/pg): ^8.18.0
+- [postcss](https://www.npmjs.com/package/postcss): ^8
+- [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
+- [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.5.14
+- [ra-data-simple-rest](https://www.npmjs.com/package/ra-data-simple-rest): ^5.14.2
+- [react](https://www.npmjs.com/package/react): ^19.2.4
+- [react-admin](https://www.npmjs.com/package/react-admin): ^4.16.20
+- [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): ^2.2.0
+- [react-confetti](https://www.npmjs.com/package/react-confetti): ^6.4.0
+- [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.4
+- [react-use](https://www.npmjs.com/package/react-use): ^17.6.0
+- [sonner](https://www.npmjs.com/package/sonner): ^2.0.7
+- [stripe](https://www.npmjs.com/package/stripe): ^20.3.1
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.6.1
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.19
+- [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
+- [tsx](https://www.npmjs.com/package/tsx): ^4.21.0
+- [typescript](https://www.npmjs.com/package/typescript): ^5
+- [zustand](https://www.npmjs.com/package/zustand): ^5.0.11
+
 <!-- DEPENDENCIES_END -->
 
 ## :coffee: Buy Me a Coffee
