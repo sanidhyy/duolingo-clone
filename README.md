@@ -44,52 +44,21 @@
 Here is the folder structure of this app.
 
 <!--- FOLDER_STRUCTURE_START --->
-
 ```bash
 duolingo-clone/
+  |- .vscode/
+    |-- settings.json
   |- actions/
-    |- challenge-progress.ts
-    |- user-progress.ts
-    |- user-subscription.ts
+    |-- challenge-progress.ts
+    |-- user-progress.ts
+    |-- user-subscription.ts
   |- app/
+    |-- (auth)/
     |-- (main)/
-        |--- courses/
-        |--- leaderboard/
-        |--- learn/
-        |--- quests/
-        |--- shop/
-        |--- layout.tsx
     |-- (marketing)/
-        |--- footer.tsx
-        |--- header.tsx
-        |--- layout.tsx
-        |--- page.tsx
     |-- admin/
-        |--- challenge/
-        |--- challengeOption/
-        |--- course/
-        |--- lesson/
-        |--- unit/
-        |--- app.tsx
-        |--- page.tsx
     |-- api/
-        |--- challengeOptions/
-        |--- challenges/
-        |--- courses/
-        |--- lessons/
-        |--- units/
-        |--- webhooks/stripe/
     |-- lesson/
-        |--- [lessonId]/
-        |--- card.tsx
-        |--- challenge.tsx
-        |--- footer.tsx
-        |--- header.tsx
-        |--- layout.tsx
-        |--- page.tsx
-        |--- question-bubble.tsx
-        |--- quiz.tsx
-        |--- result-card.tsx
     |-- apple-icon.png
     |-- favicon.ico
     |-- globals.css
@@ -99,8 +68,9 @@ duolingo-clone/
   |- components/
     |-- modals/
     |-- ui/
+    |-- banner.tsx
     |-- feed-wrapper.tsx
-    |-- mobile-wrapper.tsx
+    |-- mobile-header.tsx
     |-- mobile-sidebar.tsx
     |-- promo.tsx
     |-- quests.tsx
@@ -119,18 +89,47 @@ duolingo-clone/
     |-- stripe.ts
     |-- utils.ts
   |- public/
+    |-- boy.svg
+    |-- correct.wav
+    |-- es_boy.mp3
+    |-- es_girl.mp3
+    |-- es_man.mp3
+    |-- es_robot.mp3
+    |-- es_woman.mp3
+    |-- es_zombie.mp3
+    |-- es.svg
+    |-- finish.mp3
+    |-- finish.svg
+    |-- fr.svg
+    |-- girl.svg
+    |-- github.svg
+    |-- heart.svg
+    |-- hero.svg
+    |-- hr.svg
+    |-- incorrect.wav
+    |-- it.svg
+    |-- jp.svg
+    |-- leaderboard.svg
+    |-- learn.svg
+    |-- man.svg
+    |-- mascot_bad.svg
+    |-- mascot_sad.svg
+    |-- mascot.svg
+    |-- points.svg
+    |-- quests.svg
+    |-- robot.svg
+    |-- shop.svg
+    |-- unlimited.svg
+    |-- woman.svg
+    |-- zombie.svg
   |- scripts/
     |-- prod.ts
-    |-- reset.ts
-    |-- seed.ts
   |- store/
     |-- use-exit-modal.ts
     |-- use-hearts-modal.ts
     |-- use-practice-modal.ts
-  |- types/
-    |-- canvas.ts
-  |- .env
   |- .env.example
+  |- .env/.env.local
   |- .gitignore
   |- .prettierrc.json
   |- bun.lock
@@ -146,7 +145,6 @@ duolingo-clone/
   |- tailwind.config.ts
   |- tsconfig.json
 ```
-
 <!--- FOLDER_STRUCTURE_END --->
 
 <br />
