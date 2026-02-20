@@ -129,16 +129,16 @@ duolingo-clone/
     |-- canvas.ts
   |- .env
   |- .env.example
-  |- .eslintrc.js
   |- .gitignore
   |- .prettierrc.json
+  |- bun.lock
   |- components.json
   |- constants.ts
   |- drizzle.config.ts
   |- environment.d.ts
+  |- eslint.config.mjs
   |- middleware.ts
-  |- next.config.mjs
-  |- package-lock.json
+  |- next.config.ts
   |- package.json
   |- postcss.config.js
   |- tailwind.config.ts
@@ -181,7 +181,6 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 5. Obtain Clerk Authentication Keys
-
    1. **Source**: Clerk Dashboard or Settings Page
    2. **Procedure**:
       - Log in to your Clerk account.
@@ -190,7 +189,6 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       - Copy the `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` provided in that section.
 
 6. Retrieve Neon Database URI
-
    1. **Source**: Database Provider (e.g., Neon, PostgreSQL)
    2. **Procedure**:
       - Access your database provider's platform or configuration.
@@ -199,7 +197,6 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       - Ensure to include `?sslmode=require` at the end of the URI for SSL mode requirement.
 
 7. Fetch Stripe API Key and Webhook Secret
-
    1. **Source**: Stripe Dashboard
    2. **Procedure**:
       - Log in to your Stripe account.
@@ -208,12 +205,10 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       - Copy the `STRIPE_API_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`.
 
 8. Specify Public App URL
-
    1. **Procedure**:
       - Replace `http://localhost:3000` with the URL of your deployed application.
 
 9. Identify Clerk Admin User IDs
-
    1. **Source**: Clerk Dashboard or Settings Page
    2. **Procedure**:
       - Log in to your Clerk account.
@@ -222,26 +217,25 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       - Copy the user IDs provided, ensuring they are separated by commas and spaces.
 
 10. Save and Secure:
-
     - Save the changes to the `.env` file.
 
-11. Install Project Dependencies using `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
+11. Install Project Dependencies using `bun install --legacy-peer-deps`.
 
 12. Run the Seed Script:
 
 In the same terminal, run the following command to execute the seed script:
 
 ```bash
-npm run db:push && npm run db:prod
+bun run db:push && bun run db:prod
 ```
 
-This command uses `npm` to execute the Typescript file (`scripts/prod.ts`) and writes challenges data in database.
+This command uses `bun` to execute the Typescript file (`scripts/prod.ts`) and writes challenges data in database.
 
 13. Verify Data in Database:
 
 Once the script completes, check your database to ensure that the challenges data has been successfully seeded.
 
-14. Now app is fully configured 👍 and you can start using this app using either one of `npm run dev` or `yarn dev`.
+14. Now app is fully configured 👍 and you can start using this app using either one of `bun dev`.
 
 **NOTE:** Please make sure to keep your API keys and configuration values secure and do not expose them publicly.
 
@@ -275,32 +269,47 @@ Useful resources and dependencies that are used in Lingo.
 - Elevenlabs AI: https://elevenlabs.io/
 - Flagpack: https://flagpack.xyz/
 
-- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^4.29.9
-- [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^0.9.0
-- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.0.4
-- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.0.5
-- [@radix-ui/react-progress](https://www.npmjs.com/package/@radix-ui/react-progress): ^1.0.3
-- [@radix-ui/react-separator](https://www.npmjs.com/package/@radix-ui/react-separator): ^1.0.3
-- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.0.2
-- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.0
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^6.38.0
+- [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^1.0.2
+- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.1.11
+- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.1.15
+- [@radix-ui/react-progress](https://www.npmjs.com/package/@radix-ui/react-progress): ^1.1.8
+- [@radix-ui/react-separator](https://www.npmjs.com/package/@radix-ui/react-separator): ^1.1.8
+- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.4
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
-- [dotenv](https://www.npmjs.com/package/dotenv): ^16.4.5
-- [drizzle-orm](https://www.npmjs.com/package/drizzle-orm): ^0.30.4
-- [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.359.0
-- [next](https://www.npmjs.com/package/next): 14.1.4
-- [next-themes](https://www.npmjs.com/package/next-themes): ^0.3.0
-- [ra-data-simple-rest](https://www.npmjs.com/package/ra-data-simple-rest): ^4.16.12
-- [react](https://www.npmjs.com/package/react): ^18
-- [react-admin](https://www.npmjs.com/package/react-admin): ^4.16.13
-- [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): ^2.1.0
-- [react-confetti](https://www.npmjs.com/package/react-confetti): ^6.1.0
-- [react-dom](https://www.npmjs.com/package/react-dom): ^18
-- [react-use](https://www.npmjs.com/package/react-use): ^17.5.0
-- [sonner](https://www.npmjs.com/package/sonner): ^1.4.32
-- [stripe](https://www.npmjs.com/package/stripe): ^14.22.0
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.2.2
+- [dotenv](https://www.npmjs.com/package/dotenv): ^17.3.1
+- [drizzle-orm](https://www.npmjs.com/package/drizzle-orm): ^0.44.7
+- [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.575.0
+- [next](https://www.npmjs.com/package/next): ^15.5.10
+- [ra-data-simple-rest](https://www.npmjs.com/package/ra-data-simple-rest): ^5.14.2
+- [react](https://www.npmjs.com/package/react): ^19.2.4
+- [react-admin](https://www.npmjs.com/package/react-admin): ^4.16.20
+- [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): ^2.2.0
+- [react-confetti](https://www.npmjs.com/package/react-confetti): ^6.4.0
+- [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.4
+- [react-use](https://www.npmjs.com/package/react-use): ^17.6.0
+- [sonner](https://www.npmjs.com/package/sonner): ^2.0.7
+- [stripe](https://www.npmjs.com/package/stripe): ^20.3.1
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^2.6.1
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
-- [zustand](https://www.npmjs.com/package/zustand): ^4.5.2
+- [zustand](https://www.npmjs.com/package/zustand): ^5.0.11
+- [@eslint/eslintrc](https://www.npmjs.com/package/@eslint/eslintrc): ^3
+- [@types/node](https://www.npmjs.com/package/@types/node): ^25.3.0
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.14
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.3
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.24
+- [drizzle-kit](https://www.npmjs.com/package/drizzle-kit): ^0.31.9
+- [eslint](https://www.npmjs.com/package/eslint): ^9
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 15.5.10
+- [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^9.1.0
+- [pg](https://www.npmjs.com/package/pg): ^8.18.0
+- [postcss](https://www.npmjs.com/package/postcss): ^8
+- [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
+- [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.5.14
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.19
+- [tsx](https://www.npmjs.com/package/tsx): ^4.21.0
+- [typescript](https://www.npmjs.com/package/typescript): ^5
 
 ## :coffee: Buy Me a Coffee
 

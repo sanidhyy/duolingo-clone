@@ -1,4 +1,18 @@
 {
-  "css.customData": [".vscode/css_custom_data.json"],
-  "files.associations": { "*.css": "tailwindcss" }
+  // format settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.tabSize": 2,
+  "prettier.singleQuote": false,
+  "prettier.jsxSingleQuote": false,
+
+  // fix unknown at rule tailwind
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  // specify typescript version
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }
