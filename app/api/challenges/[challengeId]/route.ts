@@ -7,13 +7,15 @@ import { getIsAdmin } from "@/lib/admin";
 
 export const GET = async (
   _req: NextRequest,
-  { params }: { params: { challengeId: number } }
+  { params }: { params: Promise<{ challengeId: string }> }
 ) => {
+  const { challengeId } = await params;
+
   const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
   const data = await db.query.challenges.findFirst({
-    where: eq(challenges.id, params.challengeId),
+    where: eq(challenges.id, Number(challengeId)),
   });
 
   return NextResponse.json(data);
@@ -21,8 +23,10 @@ export const GET = async (
 
 export const PUT = async (
   req: NextRequest,
-  { params }: { params: { challengeId: number } }
+  { params }: { params: Promise<{ challengeId: string }> }
 ) => {
+  const { challengeId } = await params;
+
   const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
@@ -32,7 +36,7 @@ export const PUT = async (
     .set({
       ...body,
     })
-    .where(eq(challenges.id, params.challengeId))
+    .where(eq(challenges.id, Number(challengeId)))
     .returning();
 
   return NextResponse.json(data[0]);
@@ -40,14 +44,16 @@ export const PUT = async (
 
 export const DELETE = async (
   _req: NextRequest,
-  { params }: { params: { challengeId: number } }
+  { params }: { params: Promise<{ challengeId: string }> }
 ) => {
+  const { challengeId } = await params;
+
   const isAdmin = await getIsAdmin();
   if (!isAdmin) return new NextResponse("Unauthorized.", { status: 401 });
 
   const data = await db
     .delete(challenges)
-    .where(eq(challenges.id, params.challengeId))
+    .where(eq(challenges.id, Number(challengeId)))
     .returning();
 
   return NextResponse.json(data[0]);

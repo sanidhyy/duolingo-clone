@@ -10,8 +10,8 @@
     "lint:fix": "eslint --fix",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore .",
-    "db:studio": "npx drizzle-kit studio",
-    "db:push": "npx drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:push": "drizzle-kit push",
     "db:prod": "tsx ./scripts/prod.ts"
   },
   "dependencies": {

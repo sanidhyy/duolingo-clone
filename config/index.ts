@@ -23,7 +23,6 @@ export const siteConfig: Metadata = {
     "zustand",
     "mysql",
     "lucide-react",
-    "next-themes",
     "clerk-themes",
     "clerk",
     "postcss",

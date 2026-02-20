@@ -132,13 +132,13 @@ duolingo-clone/
   |- .eslintrc.js
   |- .gitignore
   |- .prettierrc.json
+  |- bun.lock
   |- components.json
   |- constants.ts
   |- drizzle.config.ts
   |- environment.d.ts
   |- middleware.ts
-  |- next.config.mjs
-  |- package-lock.json
+  |- next.config.ts
   |- package.json
   |- postcss.config.js
   |- tailwind.config.ts
@@ -181,7 +181,6 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 5. Obtain Clerk Authentication Keys
-
    1. **Source**: Clerk Dashboard or Settings Page
    2. **Procedure**:
       - Log in to your Clerk account.
@@ -190,7 +189,6 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       - Copy the `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` provided in that section.
 
 6. Retrieve Neon Database URI
-
    1. **Source**: Database Provider (e.g., Neon, PostgreSQL)
    2. **Procedure**:
       - Access your database provider's platform or configuration.
@@ -199,7 +197,6 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       - Ensure to include `?sslmode=require` at the end of the URI for SSL mode requirement.
 
 7. Fetch Stripe API Key and Webhook Secret
-
    1. **Source**: Stripe Dashboard
    2. **Procedure**:
       - Log in to your Stripe account.
@@ -208,12 +205,10 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       - Copy the `STRIPE_API_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`.
 
 8. Specify Public App URL
-
    1. **Procedure**:
       - Replace `http://localhost:3000` with the URL of your deployed application.
 
 9. Identify Clerk Admin User IDs
-
    1. **Source**: Clerk Dashboard or Settings Page
    2. **Procedure**:
       - Log in to your Clerk account.
@@ -222,26 +217,25 @@ CLERK_ADMIN_IDS="user_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       - Copy the user IDs provided, ensuring they are separated by commas and spaces.
 
 10. Save and Secure:
-
     - Save the changes to the `.env` file.
 
-11. Install Project Dependencies using `npm install --legacy-peer-deps` or `yarn install --legacy-peer-deps`.
+11. Install Project Dependencies using `bun install --legacy-peer-deps`.
 
 12. Run the Seed Script:
 
 In the same terminal, run the following command to execute the seed script:
 
 ```bash
-npm run db:push && npm run db:prod
+bun run db:push && bun run db:prod
 ```
 
-This command uses `npm` to execute the Typescript file (`scripts/prod.ts`) and writes challenges data in database.
+This command uses `bun` to execute the Typescript file (`scripts/prod.ts`) and writes challenges data in database.
 
 13. Verify Data in Database:
 
 Once the script completes, check your database to ensure that the challenges data has been successfully seeded.
 
-14. Now app is fully configured 👍 and you can start using this app using either one of `npm run dev` or `yarn dev`.
+14. Now app is fully configured 👍 and you can start using this app using either one of `bun dev`.
 
 **NOTE:** Please make sure to keep your API keys and configuration values secure and do not expose them publicly.
 
@@ -288,7 +282,6 @@ Useful resources and dependencies that are used in Lingo.
 - [drizzle-orm](https://www.npmjs.com/package/drizzle-orm): ^0.30.4
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^0.359.0
 - [next](https://www.npmjs.com/package/next): 14.1.4
-- [next-themes](https://www.npmjs.com/package/next-themes): ^0.3.0
 - [ra-data-simple-rest](https://www.npmjs.com/package/ra-data-simple-rest): ^4.16.12
 - [react](https://www.npmjs.com/package/react): ^18
 - [react-admin](https://www.npmjs.com/package/react-admin): ^4.16.13
