@@ -129,7 +129,6 @@ duolingo-clone/
     |-- canvas.ts
   |- .env
   |- .env.example
-  |- .eslintrc.js
   |- .gitignore
   |- .prettierrc.json
   |- bun.lock
@@ -137,6 +136,7 @@ duolingo-clone/
   |- constants.ts
   |- drizzle.config.ts
   |- environment.d.ts
+  |- eslint.config.mjs
   |- middleware.ts
   |- next.config.ts
   |- package.json
