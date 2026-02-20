@@ -1,11 +1,11 @@
-name: Update README Dependencies
+name: Update README Dependencies and Structure
 
 on:
   push:
     branches:
       - main
-    paths:
-      - "package.json"
+    paths-ignore:
+      - "README.md"
 
 permissions:
   contents: write
@@ -16,39 +16,106 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "lts"
 
       - name: Update README.md
         run: |
           node -e "
           const fs = require('fs');
+          const path = require('path');
           const pkg = require('./package.json');
 
-          // Combine and sort dependencies
+          // --- 1. Generate Dependencies ---
           const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
           const sortedDeps = Object.keys(deps).sort();
-
-          // Generate Markdown
           let depMarkdown = '\n';
           for (const dep of sortedDeps) {
               depMarkdown += \`- [\${dep}](https://www.npmjs.com/package/\${dep}): \${deps[dep]}\\n\`;
           }
           depMarkdown += '\n';
 
-          // Read and replace in README
+          // --- 2. Dynamic .env Detection ---
+          let envFileToInject = null;
+          // Check if .env.example exists in the root
+          if (fs.existsSync('.env.example')) {
+            envFileToInject = '.env/.env.local';
+          }
+
+          // --- 3. Generate Folder Structure (Max Depth 1) ---
+          const ignoreFolders = ['.git', '.next', 'node_modules', '.github'];
+          const ignoreFiles = ['LICENSE'];
+
+          function getStructure(dir, depth = 0) {
+            let structure = '';
+            
+            // Read directory items
+            let items = fs.readdirSync(dir, { withFileTypes: true });
+
+            // Filter out ignored folders, files, and *.md files
+            items = items.filter(item => {
+              if (item.isDirectory() && ignoreFolders.includes(item.name)) return false;
+              if (item.isFile() && ignoreFiles.includes(item.name)) return false;
+              if (item.isFile() && item.name.endsWith('.md')) return false;
+              return true;
+            });
+
+            // Artificially inject the dynamic .env string if we are at the root
+            if (depth === 0 && envFileToInject) {
+              items.push({
+                name: envFileToInject,
+                isDirectory: () => false,
+                isFile: () => true
+              });
+            }
+
+            // Sort: Directories first, then files alphabetically
+            items.sort((a, b) => {
+              if (a.isDirectory() === b.isDirectory()) {
+                return a.name.localeCompare(b.name);
+              }
+              return a.isDirectory() ? -1 : 1;
+            });
+
+            // Build the string
+            items.forEach((item) => {
+              const prefix = depth === 0 ? '  |- ' : '    |-- ';
+              
+              if (item.isDirectory()) {
+                structure += \`\${prefix}\${item.name}/\\n\`;
+                // Recurse only if at root (depth 0) to maintain max depth of 1
+                if (depth === 0) {
+                  structure += getStructure(path.join(dir, item.name), depth + 1);
+                }
+              } else {
+                structure += \`\${prefix}\${item.name}\\n\`;
+              }
+            });
+            return structure;
+          }
+
+          const projectName = pkg.name || 'project-root';
+          const folderMarkdown = '\\n\`\`\`bash\\n' + projectName + '/\\n' + getStructure('.') + '\`\`\`\\n';
+
+          // --- 4. Replace in README ---
           const readmePath = './README.md';
           let readme = fs.readFileSync(readmePath, 'utf8');
 
-          const startMarker = '<!-- DEPENDENCIES_START -->';
-          const endMarker = '<!-- DEPENDENCIES_END -->';
+          // Replace Dependencies
+          const depRegex = new RegExp('<!--- DEPENDENCIES_START --->[\\\\s\\\\S]*?<!--- DEPENDENCIES_END --->');
+          readme = readme.replace(depRegex, '<!--- DEPENDENCIES_START --->' + depMarkdown + '<!--- DEPENDENCIES_END --->');
 
-          const regex = new RegExp(\`\${startMarker}[\\\\s\\\\S]*?\${endMarker}\`);
-          readme = readme.replace(regex, \`\${startMarker}\${depMarkdown}\${endMarker}\`);
+          // Replace Folder Structure
+          const folderRegex = new RegExp('<!--- FOLDER_STRUCTURE_START --->[\\\\s\\\\S]*?<!--- FOLDER_STRUCTURE_END --->');
+          if (folderRegex.test(readme)) {
+             readme = readme.replace(folderRegex, '<!--- FOLDER_STRUCTURE_START --->' + folderMarkdown + '<!--- FOLDER_STRUCTURE_END --->');
+          } else {
+             console.log('Warning: FOLDER_STRUCTURE markers not found in README.md');
+          }
 
           fs.writeFileSync(readmePath, readme);
           "
@@ -58,5 +125,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "docs: update dependencies in README" || echo "No changes to commit"
+          git commit -m "docs: update dependencies and folder structure in README" || echo "No changes to commit"
           git push

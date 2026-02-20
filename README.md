@@ -43,6 +43,8 @@
 
 Here is the folder structure of this app.
 
+<!--- FOLDER_STRUCTURE_START --->
+
 ```bash
 duolingo-clone/
   |- actions/
@@ -144,6 +146,8 @@ duolingo-clone/
   |- tailwind.config.ts
   |- tsconfig.json
 ```
+
+<!--- FOLDER_STRUCTURE_END --->
 
 <br />
 
@@ -268,8 +272,7 @@ Useful resources and dependencies that are used in Lingo.
 - Freesound: https://freesound.org/
 - Elevenlabs AI: https://elevenlabs.io/
 - Flagpack: https://flagpack.xyz/
-
-<!-- DEPENDENCIES_START -->
+<!--- DEPENDENCIES_START --->
 - [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^6.38.0
 - [@eslint/eslintrc](https://www.npmjs.com/package/@eslint/eslintrc): ^3
 - [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^1.0.2
@@ -312,7 +315,7 @@ Useful resources and dependencies that are used in Lingo.
 - [typescript](https://www.npmjs.com/package/typescript): ^5
 - [zustand](https://www.npmjs.com/package/zustand): ^5.0.11
 
-<!-- DEPENDENCIES_END -->
+<!--- DEPENDENCIES_END --->
 
 ## :coffee: Buy Me a Coffee
 
