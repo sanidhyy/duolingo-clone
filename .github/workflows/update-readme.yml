@@ -1,0 +1,62 @@
+name: Update README Dependencies
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "package.json"
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Update README.md
+        run: |
+          node -e "
+          const fs = require('fs');
+          const pkg = require('./package.json');
+
+          // Combine and sort dependencies
+          const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
+          const sortedDeps = Object.keys(deps).sort();
+
+          // Generate Markdown
+          let depMarkdown = '\n';
+          for (const dep of sortedDeps) {
+              depMarkdown += \`- [\${dep}](https://www.npmjs.com/package/\${dep}): \${deps[dep]}\\n\`;
+          }
+          depMarkdown += '\n';
+
+          // Read and replace in README
+          const readmePath = './README.md';
+          let readme = fs.readFileSync(readmePath, 'utf8');
+
+          const startMarker = '<!-- DEPENDENCIES_START -->';
+          const endMarker = '<!-- DEPENDENCIES_END -->';
+
+          const regex = new RegExp(\`\${startMarker}[\\\\s\\\\S]*?\${endMarker}\`);
+          readme = readme.replace(regex, \`\${startMarker}\${depMarkdown}\${endMarker}\`);
+
+          fs.writeFileSync(readmePath, readme);
+          "
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: update dependencies in README" || echo "No changes to commit"
+          git push
