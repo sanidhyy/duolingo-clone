@@ -89,39 +89,6 @@ duolingo-clone/
     |-- stripe.ts
     |-- utils.ts
   |- public/
-    |-- boy.svg
-    |-- correct.wav
-    |-- es_boy.mp3
-    |-- es_girl.mp3
-    |-- es_man.mp3
-    |-- es_robot.mp3
-    |-- es_woman.mp3
-    |-- es_zombie.mp3
-    |-- es.svg
-    |-- finish.mp3
-    |-- finish.svg
-    |-- fr.svg
-    |-- girl.svg
-    |-- github.svg
-    |-- heart.svg
-    |-- hero.svg
-    |-- hr.svg
-    |-- incorrect.wav
-    |-- it.svg
-    |-- jp.svg
-    |-- leaderboard.svg
-    |-- learn.svg
-    |-- man.svg
-    |-- mascot_bad.svg
-    |-- mascot_sad.svg
-    |-- mascot.svg
-    |-- points.svg
-    |-- quests.svg
-    |-- robot.svg
-    |-- shop.svg
-    |-- unlimited.svg
-    |-- woman.svg
-    |-- zombie.svg
   |- scripts/
     |-- prod.ts
   |- store/
