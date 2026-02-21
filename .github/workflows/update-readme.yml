@@ -49,7 +49,7 @@ jobs:
           // --- 3. Generate Folder Structure (Max Depth 1) ---
           const ignoreFolders = ['.git', '.next', 'node_modules', '.github', '.vscode'];
           const ignoreFiles = ['LICENSE'];
-          const noExpandFolders = ['public'];
+          const noExpandFolders = ['public', 'migrations'];
 
           function getStructure(dir, depth = 0) {
             let structure = '';
