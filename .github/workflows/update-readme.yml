@@ -49,6 +49,7 @@ jobs:
           // --- 3. Generate Folder Structure (Max Depth 1) ---
           const ignoreFolders = ['.git', '.next', 'node_modules', '.github'];
           const ignoreFiles = ['LICENSE'];
+          const noExpandFolders = ['public'];
 
           function getStructure(dir, depth = 0) {
             let structure = '';
@@ -87,8 +88,8 @@ jobs:
               
               if (item.isDirectory()) {
                 structure += \`\${prefix}\${item.name}/\\n\`;
-                // Recurse only if at root (depth 0) to maintain max depth of 1
-                if (depth === 0) {
+                // Recurse only if at root AND the folder is not in noExpandFolders
+                if (depth === 0 && !noExpandFolders.includes(item.name)) {
                   structure += getStructure(path.join(dir, item.name), depth + 1);
                 }
               } else {
