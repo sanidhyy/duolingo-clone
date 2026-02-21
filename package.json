@@ -50,7 +50,7 @@
     "drizzle-kit": "^0.31.9",
     "eslint": "^9",
     "eslint-config-next": "15.5.10",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.1.8",
     "pg": "^8.18.0",
     "postcss": "^8",
     "prettier": "^3.8.1",
