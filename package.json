@@ -30,7 +30,7 @@
     "next": "^15.5.10",
     "ra-data-simple-rest": "^5.14.2",
     "react": "^19.2.4",
-    "react-admin": "^4.16.20",
+    "react-admin": "^5.14.2",
     "react-circular-progressbar": "^2.2.0",
     "react-confetti": "^6.4.0",
     "react-dom": "^19.2.4",
