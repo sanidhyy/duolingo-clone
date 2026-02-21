@@ -46,8 +46,6 @@ Here is the folder structure of this app.
 <!--- FOLDER_STRUCTURE_START --->
 ```bash
 duolingo-clone/
-  |- .vscode/
-    |-- settings.json
   |- actions/
     |-- challenge-progress.ts
     |-- user-progress.ts
