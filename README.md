@@ -109,6 +109,7 @@ duolingo-clone/
   |- postcss.config.js
   |- tailwind.config.ts
   |- tsconfig.json
+  |- vercel.ts
 ```
 <!--- FOLDER_STRUCTURE_END --->
 
@@ -247,6 +248,7 @@ Useful resources and dependencies that are used in Lingo.
 - [@types/node](https://www.npmjs.com/package/@types/node): ^25.3.0
 - [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.14
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.3
+- [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.0.33
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.24
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
