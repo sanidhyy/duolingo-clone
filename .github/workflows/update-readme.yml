@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - "README.md"
+      - 'README.md'
 
 permissions:
   contents: write
@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "lts/*"
+          node-version: 'lts/*'
 
       - name: Update README.md
         run: |
@@ -46,10 +46,10 @@ jobs:
             envFileToInject = '.env/.env.local';
           }
 
-          // --- 3. Generate Folder Structure (Max Depth 1) ---
+          // --- 3. Generate Folder Structure ---
           const ignoreFolders = ['.git', '.next', 'node_modules', '.github', '.vscode'];
           const ignoreFiles = ['LICENSE'];
-          const noExpandFolders = ['public', 'migrations'];
+          const noExpandFolders = ['public', 'migrations', 'assets'];
 
           function getStructure(dir, depth = 0) {
             let structure = '';
@@ -84,12 +84,15 @@ jobs:
 
             // Build the string
             items.forEach((item) => {
-              const prefix = depth === 0 ? '  |- ' : '    |-- ';
+              // Dynamically generate the tree prefix based on depth (e.g., '  |- ', '    |-- ', '      |--- ')
+              const prefix = '  '.repeat(depth + 1) + '|' + '-'.repeat(depth + 1) + ' ';
               
               if (item.isDirectory()) {
                 structure += \`\${prefix}\${item.name}/\\n\`;
-                // Recurse only if at root AND the folder is not in noExpandFolders
-                if (depth === 0 && !noExpandFolders.includes(item.name)) {
+                
+                // Recurse if at root, OR if we are at depth 1 inside a 'src' folder
+                const isSrcSubfolder = depth === 1 && path.basename(dir) === 'src';
+                if ((depth === 0 || isSrcSubfolder) && !noExpandFolders.includes(item.name)) {
                   structure += getStructure(path.join(dir, item.name), depth + 1);
                 }
               } else {
