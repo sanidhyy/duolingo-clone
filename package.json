@@ -55,7 +55,7 @@
     "pg": "^8.18.0",
     "postcss": "^8",
     "prettier": "^3.8.1",
-    "prettier-plugin-tailwindcss": "^0.5.14",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^3.4.19",
     "tsx": "^4.21.0",
     "typescript": "^5"
