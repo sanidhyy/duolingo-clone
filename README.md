@@ -263,7 +263,7 @@ Useful resources and dependencies that are used in Lingo.
 - [pg](https://www.npmjs.com/package/pg): ^8.18.0
 - [postcss](https://www.npmjs.com/package/postcss): ^8
 - [prettier](https://www.npmjs.com/package/prettier): ^3.8.1
-- [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.5.14
+- [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.7.2
 - [ra-data-simple-rest](https://www.npmjs.com/package/ra-data-simple-rest): ^5.14.2
 - [react](https://www.npmjs.com/package/react): ^19.2.4
 - [react-admin](https://www.npmjs.com/package/react-admin): ^4.16.20
