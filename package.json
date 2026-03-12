@@ -29,7 +29,7 @@
     "drizzle-orm": "^0.45.1",
     "lucide-react": "^0.577.0",
     "next": "^16.1.6",
-    "ra-data-simple-rest": "^5.14.2",
+    "ra-data-simple-rest": "^5.14.4",
     "react": "^19.2.4",
     "react-admin": "^4.16.20",
     "react-circular-progressbar": "^2.2.0",
