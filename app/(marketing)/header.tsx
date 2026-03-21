@@ -5,8 +5,7 @@ import {
   ClerkLoaded,
   ClerkLoading,
   SignInButton,
-  SignedIn,
-  SignedOut,
+  Show,
   UserButton,
   useAuth,
 } from "@clerk/nextjs";
@@ -47,17 +46,17 @@ export const Header = () => {
               <Loader className="h-5 w-5 animate-spin text-muted-foreground" />
             </ClerkLoading>
             <ClerkLoaded>
-              <SignedIn>
+              <Show when="signed-in">
                 <UserButton />
-              </SignedIn>
+              </Show>
 
-              <SignedOut>
+              <Show when="signed-out">
                 <SignInButton mode="modal">
                   <Button size="lg" variant="ghost">
                     Login
                   </Button>
                 </SignInButton>
-              </SignedOut>
+              </Show>
 
               <Link
                 href={links.sourceCode}

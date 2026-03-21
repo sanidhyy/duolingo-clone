@@ -47,7 +47,6 @@ export const Sidebar = ({ className }: SidebarProps) => {
 
         <ClerkLoaded>
           <UserButton
-            afterSignOutUrl="/"
             appearance={{
               elements: { userButtonPopoverCard: { pointerEvents: "initial" } },
             }}
