@@ -103,10 +103,10 @@ duolingo-clone/
   |- drizzle.config.ts
   |- environment.d.ts
   |- eslint.config.mjs
-  |- middleware.ts
   |- next.config.ts
   |- package.json
   |- postcss.config.js
+  |- proxy.ts
   |- tailwind.config.ts
   |- tsconfig.json
   |- vercel.ts
@@ -237,7 +237,7 @@ Useful resources and dependencies that are used in Lingo.
 - Elevenlabs AI: https://elevenlabs.io/
 - Flagpack: https://flagpack.xyz/
 <!--- DEPENDENCIES_START --->
-- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^6.38.2
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^7.0.5
 - [@eslint/eslintrc](https://www.npmjs.com/package/@eslint/eslintrc): ^3
 - [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^1.0.2
 - [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.1.11
