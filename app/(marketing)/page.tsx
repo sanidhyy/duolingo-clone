@@ -3,8 +3,7 @@ import {
   ClerkLoading,
   SignInButton,
   SignUpButton,
-  SignedIn,
-  SignedOut,
+  Show,
 } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import Image from "next/image";
@@ -30,7 +29,13 @@ export default function MarketingPage() {
           </ClerkLoading>
 
           <ClerkLoaded>
-            <SignedOut>
+            <Show when="signed-in">
+              <Button size="lg" variant="secondary" className="w-full" asChild>
+                <Link href="/learn">Continue Learning</Link>
+              </Button>
+            </Show>
+
+            <Show when="signed-out">
               <SignUpButton mode="modal">
                 <Button size="lg" variant="secondary" className="w-full">
                   Get Started
@@ -42,13 +47,7 @@ export default function MarketingPage() {
                   I already have an account
                 </Button>
               </SignInButton>
-            </SignedOut>
-
-            <SignedIn>
-              <Button size="lg" variant="secondary" className="w-full" asChild>
-                <Link href="/learn">Continue Learning</Link>
-              </Button>
-            </SignedIn>
+            </Show>
           </ClerkLoaded>
         </div>
       </div>
