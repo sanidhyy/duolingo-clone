@@ -252,7 +252,7 @@ Useful resources and dependencies that are used in Lingo.
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.4.27
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
-- [dotenv](https://www.npmjs.com/package/dotenv): ^17.3.1
+- [dotenv](https://www.npmjs.com/package/dotenv): ^17.4.0
 - [drizzle-kit](https://www.npmjs.com/package/drizzle-kit): ^0.31.9
 - [drizzle-orm](https://www.npmjs.com/package/drizzle-orm): ^0.45.1
 - [eslint](https://www.npmjs.com/package/eslint): ^10
