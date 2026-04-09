@@ -50,7 +50,7 @@
     "autoprefixer": "^10.4.27",
     "drizzle-kit": "^0.31.10",
     "eslint": "^10",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "16.2.3",
     "eslint-config-prettier": "^10.1.8",
     "pg": "^8.20.0",
     "postcss": "^8",
