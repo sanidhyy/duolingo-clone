@@ -5,7 +5,7 @@
     "": {
       "name": "duolingo-clone",
       "dependencies": {
-        "@clerk/nextjs": "^7.0.5",
+        "@clerk/nextjs": "^7.0.12",
         "@neondatabase/serverless": "^1.0.2",
         "@radix-ui/react-avatar": "^1.1.11",
         "@radix-ui/react-dialog": "^1.1.15",
@@ -91,13 +91,13 @@
 
     "@babel/types": ["@babel/types@7.29.0", "", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="],
 
-    "@clerk/backend": ["@clerk/backend@3.2.1", "", { "dependencies": { "@clerk/shared": "^4.3.1", "standardwebhooks": "^1.0.0", "tslib": "2.8.1" } }, "sha512-xX0docBaMUhGAEdbP/QTlGErxNR9d0VYFMLq32vM7v0TgYPZcChC9Q735nb/TNVmIZK3besiM0LlRQ7/XsQ5pw=="],
+    "@clerk/backend": ["@clerk/backend@3.2.8", "", { "dependencies": { "@clerk/shared": "^4.6.0", "standardwebhooks": "^1.0.0", "tslib": "2.8.1" } }, "sha512-N9yqCQCdkn/4XpfiVnaoS6wXDeC2yQf85ioHGolOIOCWXOPwMd63fONUfRhwOZSlXGTAsgyUNZu87Ps0tcVYsg=="],
 
-    "@clerk/nextjs": ["@clerk/nextjs@7.0.5", "", { "dependencies": { "@clerk/backend": "^3.2.1", "@clerk/react": "^6.1.1", "@clerk/shared": "^4.3.1", "server-only": "0.0.1", "tslib": "2.8.1" }, "peerDependencies": { "next": "^15.2.8 || ^15.3.8 || ^15.4.10 || ^15.5.9 || ^15.6.0-0 || ^16.0.10 || ^16.1.0-0", "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" } }, "sha512-+2bTJDWWAoEOpJkdDRobQHceg3vsDhnflLztw5CoNbnbYYCYdNCfEH0qQTw7tBvrG/MwZz3rIk/z/xL4TKVjPw=="],
+    "@clerk/nextjs": ["@clerk/nextjs@7.0.12", "", { "dependencies": { "@clerk/backend": "^3.2.8", "@clerk/react": "^6.2.1", "@clerk/shared": "^4.6.0", "server-only": "0.0.1", "tslib": "2.8.1" }, "peerDependencies": { "next": "^15.2.8 || ^15.3.8 || ^15.4.10 || ^15.5.9 || ^15.6.0-0 || ^16.0.10 || ^16.1.0-0", "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" } }, "sha512-dq4iOLKf5PImLlA2YAs7c2E+yBiOYlbMlnw386xw+sTe/kv4KpRQPk2g/7PeEvFxFaV1gY764iy2sr4jy2bdQA=="],
 
-    "@clerk/react": ["@clerk/react@6.1.1", "", { "dependencies": { "@clerk/shared": "^4.3.1", "tslib": "2.8.1" }, "peerDependencies": { "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" } }, "sha512-PTNR3t5zDex5vfoyBPAOthm6doRHXeKIrWrFlEru+XgqvmLxO8+UKsqjZlvOGL4o98uYDp2AHQCsMlxkhZ8vCg=="],
+    "@clerk/react": ["@clerk/react@6.2.1", "", { "dependencies": { "@clerk/shared": "^4.6.0", "tslib": "2.8.1" }, "peerDependencies": { "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" } }, "sha512-fZpCBHTRgxkLk1S7FPp8iDpl2ZoZ/VFKvQWs3CFRX4Z9FFEcC5eAMPYbEL3treUv3TzQxcGTSgp5gd9+mFx4LQ=="],
 
-    "@clerk/shared": ["@clerk/shared@4.3.1", "", { "dependencies": { "@tanstack/query-core": "5.90.16", "dequal": "2.0.3", "glob-to-regexp": "0.4.1", "js-cookie": "3.0.5", "std-env": "^3.9.0" }, "peerDependencies": { "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" }, "optionalPeers": ["react", "react-dom"] }, "sha512-kdpwUu8n2txr+98I9cD8Ms8ZdqQkDJEVWP73i1/T7FAGXmM0G8j1qEC+C2pRnZGuDRwkJbn4Py8qT/Vsy8eDCQ=="],
+    "@clerk/shared": ["@clerk/shared@4.6.0", "", { "dependencies": { "@tanstack/query-core": "5.90.16", "dequal": "2.0.3", "glob-to-regexp": "0.4.1", "js-cookie": "3.0.5", "std-env": "^3.9.0" }, "peerDependencies": { "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" }, "optionalPeers": ["react", "react-dom"] }, "sha512-dtbsO/+xK5e+qWuOAY1ekZ8BJxsB0F0LYDpXWjRON7JSoFKSaqqaH5cwBvdjbbWaehb6jz1YUQmWVV8gBOx6Ag=="],
 
     "@drizzle-team/brocli": ["@drizzle-team/brocli@0.10.2", "", {}, "sha512-z33Il7l5dKjUgGULTqBsQBQwckHh5AbIuxhdsIxDDiZAzBOrZO6q9ogcWC65kU382AfynTfgNumVcNIjuIua6w=="],
 
