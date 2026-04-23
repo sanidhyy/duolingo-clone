@@ -5,7 +5,7 @@
     "": {
       "name": "duolingo-clone",
       "dependencies": {
-        "@clerk/nextjs": "^7.0.12",
+        "@clerk/nextjs": "^7.2.5",
         "@neondatabase/serverless": "^1.0.2",
         "@radix-ui/react-avatar": "^1.1.11",
         "@radix-ui/react-dialog": "^1.1.15",
@@ -20,7 +20,7 @@
         "lucide-react": "^1.7.0",
         "next": "^16.2.1",
         "ra-data-simple-rest": "^5.14.5",
-        "react": "^19.2.4",
+        "react": "^19.2.5",
         "react-admin": "^4.16.20",
         "react-circular-progressbar": "^2.2.0",
         "react-confetti": "^6.4.0",
@@ -91,13 +91,13 @@
 
     "@babel/types": ["@babel/types@7.29.0", "", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="],
 
-    "@clerk/backend": ["@clerk/backend@3.2.8", "", { "dependencies": { "@clerk/shared": "^4.6.0", "standardwebhooks": "^1.0.0", "tslib": "2.8.1" } }, "sha512-N9yqCQCdkn/4XpfiVnaoS6wXDeC2yQf85ioHGolOIOCWXOPwMd63fONUfRhwOZSlXGTAsgyUNZu87Ps0tcVYsg=="],
+    "@clerk/backend": ["@clerk/backend@3.3.0", "", { "dependencies": { "@clerk/shared": "^4.8.3", "standardwebhooks": "^1.0.0", "tslib": "2.8.1" } }, "sha512-6KuOaIig4CQPSn23I7xExkGKKi2rE2PEH3mvhnA41fktv3LqtPSifRb0xjmJEAwSZwJ8QY6uzk/jDccNof2eUA=="],
 
-    "@clerk/nextjs": ["@clerk/nextjs@7.0.12", "", { "dependencies": { "@clerk/backend": "^3.2.8", "@clerk/react": "^6.2.1", "@clerk/shared": "^4.6.0", "server-only": "0.0.1", "tslib": "2.8.1" }, "peerDependencies": { "next": "^15.2.8 || ^15.3.8 || ^15.4.10 || ^15.5.9 || ^15.6.0-0 || ^16.0.10 || ^16.1.0-0", "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" } }, "sha512-dq4iOLKf5PImLlA2YAs7c2E+yBiOYlbMlnw386xw+sTe/kv4KpRQPk2g/7PeEvFxFaV1gY764iy2sr4jy2bdQA=="],
+    "@clerk/nextjs": ["@clerk/nextjs@7.2.5", "", { "dependencies": { "@clerk/backend": "^3.3.0", "@clerk/react": "^6.4.3", "@clerk/shared": "^4.8.3", "server-only": "0.0.1", "tslib": "2.8.1" }, "peerDependencies": { "next": "^15.2.8 || ^15.3.8 || ^15.4.10 || ^15.5.9 || ^15.6.0-0 || ^16.0.10 || ^16.1.0-0", "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" } }, "sha512-j01a3yBI/Sr6Vv7u97nWtZojOp6s+1+c9wgPwISEBtB0Qbc3OeR/RRaJ1Jw0I3lw5/pvDaDIg7UrH4LTgsnhuA=="],
 
-    "@clerk/react": ["@clerk/react@6.2.1", "", { "dependencies": { "@clerk/shared": "^4.6.0", "tslib": "2.8.1" }, "peerDependencies": { "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" } }, "sha512-fZpCBHTRgxkLk1S7FPp8iDpl2ZoZ/VFKvQWs3CFRX4Z9FFEcC5eAMPYbEL3treUv3TzQxcGTSgp5gd9+mFx4LQ=="],
+    "@clerk/react": ["@clerk/react@6.4.3", "", { "dependencies": { "@clerk/shared": "^4.8.3", "tslib": "2.8.1" }, "peerDependencies": { "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" } }, "sha512-CLZJZ9GOTEqrTrOpq3SuvKhjcQ69Mc5vCrz5Xg77J+7ZX+BgsOLmmqQhMxZ0THhTIoOu0pZ3UazlZEAsv3fSbQ=="],
 
-    "@clerk/shared": ["@clerk/shared@4.6.0", "", { "dependencies": { "@tanstack/query-core": "5.90.16", "dequal": "2.0.3", "glob-to-regexp": "0.4.1", "js-cookie": "3.0.5", "std-env": "^3.9.0" }, "peerDependencies": { "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" }, "optionalPeers": ["react", "react-dom"] }, "sha512-dtbsO/+xK5e+qWuOAY1ekZ8BJxsB0F0LYDpXWjRON7JSoFKSaqqaH5cwBvdjbbWaehb6jz1YUQmWVV8gBOx6Ag=="],
+    "@clerk/shared": ["@clerk/shared@4.8.3", "", { "dependencies": { "@tanstack/query-core": "5.90.16", "dequal": "2.0.3", "glob-to-regexp": "0.4.1", "js-cookie": "3.0.5", "std-env": "^3.9.0" }, "peerDependencies": { "react": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0", "react-dom": "^18.0.0 || ~19.0.3 || ~19.1.4 || ~19.2.3 || ~19.3.0-0" }, "optionalPeers": ["react", "react-dom"] }, "sha512-HZViZBCTfOR2OreSBDMXcIRPgYiiYCE+GCCPrpjq/ZPcA6OsGiRCIQgUoGgGdAoFgr6Hk0TT00hnVK7g0qRKqQ=="],
 
     "@drizzle-team/brocli": ["@drizzle-team/brocli@0.10.2", "", {}, "sha512-z33Il7l5dKjUgGULTqBsQBQwckHh5AbIuxhdsIxDDiZAzBOrZO6q9ogcWC65kU382AfynTfgNumVcNIjuIua6w=="],
 
@@ -1047,7 +1047,7 @@
 
     "ra-ui-materialui": ["ra-ui-materialui@4.16.20", "", { "dependencies": { "autosuggest-highlight": "^3.1.1", "clsx": "^1.1.1", "css-mediaquery": "^0.1.2", "dompurify": "^2.4.3", "hotscript": "^1.0.12", "inflection": "~1.12.0", "jsonexport": "^3.2.0", "lodash": "~4.17.5", "prop-types": "^15.7.0", "query-string": "^7.1.1", "react-dropzone": "^12.0.4", "react-error-boundary": "^3.1.4", "react-query": "^3.32.1", "react-transition-group": "^4.4.1" }, "peerDependencies": { "@mui/icons-material": "^5.0.1", "@mui/material": "^5.0.2", "ra-core": "^4.0.0", "react": "^16.9.0 || ^17.0.0 || ^18.0.0", "react-dom": "^16.9.0 || ^17.0.0 || ^18.0.0", "react-hook-form": "*", "react-is": "^16.9.0 || ^17.0.0 || ^18.0.0", "react-router": "^6.1.0", "react-router-dom": "^6.1.0" } }, "sha512-i2DQ2219YTbjhXfBjkMIKmWiqZRQDyW+yMAgehfSjVbVD17QhoWG3fib4ILA58ADe4trLhFNg4WPkO3y8q37dw=="],
 
-    "react": ["react@19.2.4", "", {}, "sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ=="],
+    "react": ["react@19.2.5", "", {}, "sha512-llUJLzz1zTUBrskt2pwZgLq59AemifIftw4aB7JxOqf1HY2FDaGDxgwpAPVzHU1kdWabH7FauP4i1oEeer2WCA=="],
 
     "react-admin": ["react-admin@4.16.20", "", { "dependencies": { "@emotion/react": "^11.4.1", "@emotion/styled": "^11.3.0", "@mui/icons-material": "^5.0.1", "@mui/material": "^5.0.2", "history": "^5.1.0", "ra-core": "^4.16.20", "ra-i18n-polyglot": "^4.16.20", "ra-language-english": "^4.16.20", "ra-ui-materialui": "^4.16.20", "react-hook-form": "^7.43.9", "react-router": "^6.1.0", "react-router-dom": "^6.1.0" }, "peerDependencies": { "react": "^16.9.0 || ^17.0.0 || ^18.0.0", "react-dom": "^16.9.0 || ^17.0.0 || ^18.0.0" } }, "sha512-9QLc5uTI669dGceC+VT08LG2vytMMSpvwg2lJJS4wqJJykQKlZXJelpOLAGWlggEuAXtyC2nMG8S6sgl7+hBDQ=="],
 
