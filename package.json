@@ -28,7 +28,7 @@
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.1",
     "lucide-react": "^1.7.0",
-    "next": "^16.2.1",
+    "next": "^16.2.4",
     "ra-data-simple-rest": "^5.14.5",
     "react": "^19.2.5",
     "react-admin": "^4.16.20",
