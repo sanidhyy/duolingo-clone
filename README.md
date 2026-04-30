@@ -237,7 +237,7 @@ Useful resources and dependencies that are used in Lingo.
 - Elevenlabs AI: https://elevenlabs.io/
 - Flagpack: https://flagpack.xyz/
 <!--- DEPENDENCIES_START --->
-- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^7.2.5
+- [@clerk/nextjs](https://www.npmjs.com/package/@clerk/nextjs): ^7.2.8
 - [@eslint/eslintrc](https://www.npmjs.com/package/@eslint/eslintrc): ^3
 - [@neondatabase/serverless](https://www.npmjs.com/package/@neondatabase/serverless): ^1.1.0
 - [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.1.11
