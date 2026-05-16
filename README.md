@@ -248,7 +248,7 @@ Useful resources and dependencies that are used in Lingo.
 - [@types/node](https://www.npmjs.com/package/@types/node): ^25.6.0
 - [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.14
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.3
-- [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.2.1
+- [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.4.0
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.0
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
 - [clsx](https://www.npmjs.com/package/clsx): ^2.1.0
