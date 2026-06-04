@@ -273,7 +273,7 @@ Useful resources and dependencies that are used in Lingo.
 - [react-use](https://www.npmjs.com/package/react-use): ^17.6.0
 - [sonner](https://www.npmjs.com/package/sonner): ^2.0.7
 - [stripe](https://www.npmjs.com/package/stripe): ^22.2.0
-- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.5.0
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
 - [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.4.19
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
 - [tsx](https://www.npmjs.com/package/tsx): ^4.22.3
