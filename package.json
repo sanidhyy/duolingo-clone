@@ -35,7 +35,7 @@
     "react-circular-progressbar": "^2.2.0",
     "react-confetti": "^6.4.0",
     "react-dom": "^19.2.6",
-    "react-use": "^17.6.0",
+    "react-use": "^17.6.1",
     "sonner": "^2.0.7",
     "stripe": "^22.2.0",
     "tailwind-merge": "^3.6.0",
