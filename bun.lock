@@ -20,7 +20,7 @@
         "lucide-react": "^1.14.0",
         "next": "^16.2.9",
         "ra-data-simple-rest": "^5.14.7",
-        "react": "^19.2.6",
+        "react": "^19.2.7",
         "react-admin": "^4.16.20",
         "react-circular-progressbar": "^2.2.0",
         "react-confetti": "^6.4.0",
@@ -35,7 +35,7 @@
       "devDependencies": {
         "@eslint/eslintrc": "^3",
         "@types/node": "^25.9.1",
-        "@types/react": "^19.2.14",
+        "@types/react": "^19.2.17",
         "@types/react-dom": "^19.2.3",
         "autoprefixer": "^10.5.0",
         "drizzle-kit": "^0.31.10",
@@ -389,7 +389,7 @@
 
     "@types/prop-types": ["@types/prop-types@15.7.15", "", {}, "sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw=="],
 
-    "@types/react": ["@types/react@19.2.14", "", { "dependencies": { "csstype": "^3.2.2" } }, "sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w=="],
+    "@types/react": ["@types/react@19.2.17", "", { "dependencies": { "csstype": "^3.2.2" } }, "sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw=="],
 
     "@types/react-dom": ["@types/react-dom@19.2.3", "", { "peerDependencies": { "@types/react": "^19.2.0" } }, "sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ=="],
 
@@ -1045,7 +1045,7 @@
 
     "ra-ui-materialui": ["ra-ui-materialui@4.16.20", "", { "dependencies": { "autosuggest-highlight": "^3.1.1", "clsx": "^1.1.1", "css-mediaquery": "^0.1.2", "dompurify": "^2.4.3", "hotscript": "^1.0.12", "inflection": "~1.12.0", "jsonexport": "^3.2.0", "lodash": "~4.17.5", "prop-types": "^15.7.0", "query-string": "^7.1.1", "react-dropzone": "^12.0.4", "react-error-boundary": "^3.1.4", "react-query": "^3.32.1", "react-transition-group": "^4.4.1" }, "peerDependencies": { "@mui/icons-material": "^5.0.1", "@mui/material": "^5.0.2", "ra-core": "^4.0.0", "react": "^16.9.0 || ^17.0.0 || ^18.0.0", "react-dom": "^16.9.0 || ^17.0.0 || ^18.0.0", "react-hook-form": "*", "react-is": "^16.9.0 || ^17.0.0 || ^18.0.0", "react-router": "^6.1.0", "react-router-dom": "^6.1.0" } }, "sha512-i2DQ2219YTbjhXfBjkMIKmWiqZRQDyW+yMAgehfSjVbVD17QhoWG3fib4ILA58ADe4trLhFNg4WPkO3y8q37dw=="],
 
-    "react": ["react@19.2.6", "", {}, "sha512-sfWGGfavi0xr8Pg0sVsyHMAOziVYKgPLNrS7ig+ivMNb3wbCBw3KxtflsGBAwD3gYQlE/AEZsTLgToRrSCjb0Q=="],
+    "react": ["react@19.2.7", "", {}, "sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ=="],
 
     "react-admin": ["react-admin@4.16.20", "", { "dependencies": { "@emotion/react": "^11.4.1", "@emotion/styled": "^11.3.0", "@mui/icons-material": "^5.0.1", "@mui/material": "^5.0.2", "history": "^5.1.0", "ra-core": "^4.16.20", "ra-i18n-polyglot": "^4.16.20", "ra-language-english": "^4.16.20", "ra-ui-materialui": "^4.16.20", "react-hook-form": "^7.43.9", "react-router": "^6.1.0", "react-router-dom": "^6.1.0" }, "peerDependencies": { "react": "^16.9.0 || ^17.0.0 || ^18.0.0", "react-dom": "^16.9.0 || ^17.0.0 || ^18.0.0" } }, "sha512-9QLc5uTI669dGceC+VT08LG2vytMMSpvwg2lJJS4wqJJykQKlZXJelpOLAGWlggEuAXtyC2nMG8S6sgl7+hBDQ=="],
 
