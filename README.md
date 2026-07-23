@@ -270,7 +270,7 @@ Useful resources and dependencies that are used in Lingo.
 - [react-admin](https://www.npmjs.com/package/react-admin): ^5.15.1
 - [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): ^2.2.0
 - [react-confetti](https://www.npmjs.com/package/react-confetti): ^6.4.0
-- [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.7
+- [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.8
 - [react-use](https://www.npmjs.com/package/react-use): ^17.6.1
 - [sonner](https://www.npmjs.com/package/sonner): ^2.0.7
 - [stripe](https://www.npmjs.com/package/stripe): ^22.3.0
