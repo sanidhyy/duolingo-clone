@@ -266,7 +266,7 @@ Useful resources and dependencies that are used in Lingo.
 - [prettier](https://www.npmjs.com/package/prettier): ^3.9.5
 - [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.8.0
 - [ra-data-simple-rest](https://www.npmjs.com/package/ra-data-simple-rest): ^5.15.0
-- [react](https://www.npmjs.com/package/react): ^19.2.7
+- [react](https://www.npmjs.com/package/react): ^19.2.8
 - [react-admin](https://www.npmjs.com/package/react-admin): ^5.15.1
 - [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): ^2.2.0
 - [react-confetti](https://www.npmjs.com/package/react-confetti): ^6.4.0
