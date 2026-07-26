@@ -1,335 +1,121 @@
 import { neon } from "@neondatabase/serverless";
 import "dotenv/config";
 import { drizzle } from "drizzle-orm/neon-http";
-
 import * as schema from "@/db/schema";
 
-const sql = neon(process.env.DATABASE_URL);
-
+const sql = neon(process.env.DATABASE_URL!);
 const db = drizzle(sql, { schema });
 
-const main = async () => {
-  try {
-    console.log("Seeding database");
+const units = [
+  {
+    title: "بخش ۱: آشنایی با سوره‌های کوتاه",
+    description: "حفظ و درک سوره‌های نورانی",
+    lessons: ["سوره حمد", "سوره اخلاص", "سوره فلق", "سوره ناس", "مرور بخش اول"],
+  },
+  {
+    title: "بخش ۲: قرائت زیبا",
+    description: "با قواعد ساده تجوید آشنا شو",
+    lessons: [
+      "آهنگ آیات",
+      "وقف و ابتدا",
+      "حروف مد",
+      "تلفظ درست",
+      "تمرین قرائت",
+    ],
+  },
+  {
+    title: "بخش ۳: پیام‌های زندگی",
+    description: "مفهوم آیات را در زندگی پیدا کن",
+    lessons: ["شکرگزاری", "مهربانی", "راستگویی", "امید", "مرور مفاهیم"],
+  },
+];
+const questions = [
+  {
+    question: "کدام عبارت آغاز سوره حمد است؟",
+    options: [
+      "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
+    ],
+    correct: 0,
+  },
+  {
+    question: "پیام «الْحَمْدُ لِلَّهِ» چیست؟",
+    options: ["شکر و ستایش خداوند", "ترس از دیگران", "تنها بودن"],
+    correct: 0,
+  },
+  {
+    question: "برای خواندن بهتر آیه چه کاری مفید است؟",
+    options: [
+      "با آرامش و دقت بخوانیم",
+      "خیلی تند بخوانیم",
+      "کلمات را حذف کنیم",
+    ],
+    correct: 0,
+  },
+];
 
-    // Delete all existing data
-    await Promise.all([
-      db.delete(schema.userProgress),
-      db.delete(schema.challenges),
-      db.delete(schema.units),
-      db.delete(schema.lessons),
-      db.delete(schema.courses),
-      db.delete(schema.challengeOptions),
-      db.delete(schema.userSubscription),
-    ]);
-
-    // Insert courses
-    const courses = await db
-      .insert(schema.courses)
-      .values([{ title: "Spanish", imageSrc: "/es.svg" }])
+async function main() {
+  await Promise.all([
+    db.delete(schema.challengeProgress),
+    db.delete(schema.challengeOptions),
+    db.delete(schema.challenges),
+    db.delete(schema.lessons),
+    db.delete(schema.units),
+    db.delete(schema.userProgress),
+    db.delete(schema.courses),
+  ]);
+  const [course] = await db
+    .insert(schema.courses)
+    .values({ title: "مسیر قرآن نوجوان", imageSrc: "/quran-hero.png" })
+    .returning();
+  for (let unitIndex = 0; unitIndex < units.length; unitIndex++) {
+    const unitData = units[unitIndex];
+    const [unit] = await db
+      .insert(schema.units)
+      .values({
+        courseId: course.id,
+        title: unitData.title,
+        description: unitData.description,
+        order: unitIndex + 1,
+      })
       .returning();
-
-    // For each course, insert units
-    for (const course of courses) {
-      const units = await db
-        .insert(schema.units)
-        .values([
-          {
-            courseId: course.id,
-            title: "Unit 1",
-            description: `Learn the basics of ${course.title}`,
-            order: 1,
-          },
-          {
-            courseId: course.id,
-            title: "Unit 2",
-            description: `Learn intermediate ${course.title}`,
-            order: 2,
-          },
-        ])
+    for (
+      let lessonIndex = 0;
+      lessonIndex < unitData.lessons.length;
+      lessonIndex++
+    ) {
+      const [lesson] = await db
+        .insert(schema.lessons)
+        .values({
+          unitId: unit.id,
+          title: unitData.lessons[lessonIndex],
+          order: lessonIndex + 1,
+        })
         .returning();
-
-      // For each unit, insert lessons
-      for (const unit of units) {
-        const lessons = await db
-          .insert(schema.lessons)
-          .values([
-            { unitId: unit.id, title: "Nouns", order: 1 },
-            { unitId: unit.id, title: "Verbs", order: 2 },
-            { unitId: unit.id, title: "Adjectives", order: 3 },
-            { unitId: unit.id, title: "Phrases", order: 4 },
-            { unitId: unit.id, title: "Sentences", order: 5 },
-          ])
+      for (let qIndex = 0; qIndex < questions.length; qIndex++) {
+        const q = questions[qIndex];
+        const [challenge] = await db
+          .insert(schema.challenges)
+          .values({
+            lessonId: lesson.id,
+            type: "SELECT",
+            question: q.question,
+            order: qIndex + 1,
+          })
           .returning();
-
-        // For each lesson, insert challenges
-        for (const lesson of lessons) {
-          const challenges = await db
-            .insert(schema.challenges)
-            .values([
-              {
-                lessonId: lesson.id,
-                type: "SELECT",
-                question: 'Which one of these is "the man"?',
-                order: 1,
-              },
-              {
-                lessonId: lesson.id,
-                type: "SELECT",
-                question: 'Which one of these is "the woman"?',
-                order: 2,
-              },
-              {
-                lessonId: lesson.id,
-                type: "SELECT",
-                question: 'Which one of these is "the boy"?',
-                order: 3,
-              },
-              {
-                lessonId: lesson.id,
-                type: "ASSIST",
-                question: '"the man"',
-                order: 4,
-              },
-              {
-                lessonId: lesson.id,
-                type: "SELECT",
-                question: 'Which one of these is "the zombie"?',
-                order: 5,
-              },
-              {
-                lessonId: lesson.id,
-                type: "SELECT",
-                question: 'Which one of these is "the robot"?',
-                order: 6,
-              },
-              {
-                lessonId: lesson.id,
-                type: "SELECT",
-                question: 'Which one of these is "the girl"?',
-                order: 7,
-              },
-              {
-                lessonId: lesson.id,
-                type: "ASSIST",
-                question: '"the zombie"',
-                order: 8,
-              },
-            ])
-            .returning();
-
-          // For each challenge, insert challenge options
-          for (const challenge of challenges) {
-            if (challenge.order === 1) {
-              await db.insert(schema.challengeOptions).values([
-                {
-                  challengeId: challenge.id,
-                  correct: true,
-                  text: "el hombre",
-                  imageSrc: "/man.svg",
-                  audioSrc: "/es_man.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "la mujer",
-                  imageSrc: "/woman.svg",
-                  audioSrc: "/es_woman.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el chico",
-                  imageSrc: "/boy.svg",
-                  audioSrc: "/es_boy.mp3",
-                },
-              ]);
-            }
-
-            if (challenge.order === 2) {
-              await db.insert(schema.challengeOptions).values([
-                {
-                  challengeId: challenge.id,
-                  correct: true,
-                  text: "la mujer",
-                  imageSrc: "/woman.svg",
-                  audioSrc: "/es_woman.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el chico",
-                  imageSrc: "/boy.svg",
-                  audioSrc: "/es_boy.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el hombre",
-                  imageSrc: "/man.svg",
-                  audioSrc: "/es_man.mp3",
-                },
-              ]);
-            }
-
-            if (challenge.order === 3) {
-              await db.insert(schema.challengeOptions).values([
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "la mujer",
-                  imageSrc: "/woman.svg",
-                  audioSrc: "/es_woman.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el hombre",
-                  imageSrc: "/man.svg",
-                  audioSrc: "/es_man.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: true,
-                  text: "el chico",
-                  imageSrc: "/boy.svg",
-                  audioSrc: "/es_boy.mp3",
-                },
-              ]);
-            }
-
-            if (challenge.order === 4) {
-              await db.insert(schema.challengeOptions).values([
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "la mujer",
-                  audioSrc: "/es_woman.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: true,
-                  text: "el hombre",
-                  audioSrc: "/es_man.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el chico",
-                  audioSrc: "/es_boy.mp3",
-                },
-              ]);
-            }
-
-            if (challenge.order === 5) {
-              await db.insert(schema.challengeOptions).values([
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el hombre",
-                  imageSrc: "/man.svg",
-                  audioSrc: "/es_man.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "la mujer",
-                  imageSrc: "/woman.svg",
-                  audioSrc: "/es_woman.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: true,
-                  text: "el zombie",
-                  imageSrc: "/zombie.svg",
-                  audioSrc: "/es_zombie.mp3",
-                },
-              ]);
-            }
-
-            if (challenge.order === 6) {
-              await db.insert(schema.challengeOptions).values([
-                {
-                  challengeId: challenge.id,
-                  correct: true,
-                  text: "el robot",
-                  imageSrc: "/robot.svg",
-                  audioSrc: "/es_robot.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el zombie",
-                  imageSrc: "/zombie.svg",
-                  audioSrc: "/es_zombie.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el chico",
-                  imageSrc: "/boy.svg",
-                  audioSrc: "/es_boy.mp3",
-                },
-              ]);
-            }
-
-            if (challenge.order === 7) {
-              await db.insert(schema.challengeOptions).values([
-                {
-                  challengeId: challenge.id,
-                  correct: true,
-                  text: "la nina",
-                  imageSrc: "/girl.svg",
-                  audioSrc: "/es_girl.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el zombie",
-                  imageSrc: "/zombie.svg",
-                  audioSrc: "/es_zombie.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el hombre",
-                  imageSrc: "/man.svg",
-                  audioSrc: "/es_man.mp3",
-                },
-              ]);
-            }
-
-            if (challenge.order === 8) {
-              await db.insert(schema.challengeOptions).values([
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "la mujer",
-                  audioSrc: "/es_woman.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: true,
-                  text: "el zombie",
-                  audioSrc: "/es_zombie.mp3",
-                },
-                {
-                  challengeId: challenge.id,
-                  correct: false,
-                  text: "el chico",
-                  audioSrc: "/es_boy.mp3",
-                },
-              ]);
-            }
-          }
-        }
+        await db
+          .insert(schema.challengeOptions)
+          .values(
+            q.options.map((text, optionIndex) => ({
+              challengeId: challenge.id,
+              text,
+              correct: optionIndex === q.correct,
+            }))
+          );
       }
     }
-    console.log("Database seeded successfully");
-  } catch (error) {
-    console.error(error);
-    throw new Error("Failed to seed database");
   }
-};
-
-void main();
+  console.log("Quran learning content seeded successfully");
+}
+main().catch(console.error);

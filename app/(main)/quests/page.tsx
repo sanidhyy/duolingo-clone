@@ -10,7 +10,7 @@ import { UserProgress } from "@/components/user-progress";
 import { QUESTS } from "@/constants";
 import { getUserProgress, getUserSubscription } from "@/db/queries";
 
-const QuestsPage = async () => {
+const ماموریت‌هاPage = async () => {
   await auth.protect();
 
   const userProgressData = getUserProgress();
@@ -39,13 +39,13 @@ const QuestsPage = async () => {
 
       <FeedWrapper>
         <div className="flex w-full flex-col items-center">
-          <Image src="/quests.svg" alt="Quests" height={90} width={90} />
+          <Image src="/quests.svg" alt="ماموریت‌ها" height={90} width={90} />
 
           <h1 className="my-6 text-center text-2xl font-bold text-neutral-800">
-            Quests
+            ماموریت‌ها
           </h1>
           <p className="mb-6 text-center text-lg text-muted-foreground">
-            Complete quests by earning points.
+            با تمرین کردن، ماموریت‌ها را کامل کن.
           </p>
 
           <ul className="w-full">
@@ -59,7 +59,7 @@ const QuestsPage = async () => {
                 >
                   <Image
                     src="/points.svg"
-                    alt="Points"
+                    alt="امتیاز"
                     width={60}
                     height={60}
                   />
@@ -81,4 +81,4 @@ const QuestsPage = async () => {
   );
 };
 
-export default QuestsPage;
+export default ماموریت‌هاPage;

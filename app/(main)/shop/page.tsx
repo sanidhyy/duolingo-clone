@@ -40,13 +40,13 @@ const ShopPage = async () => {
 
       <FeedWrapper>
         <div className="flex w-full flex-col items-center">
-          <Image src="/shop.svg" alt="Shop" height={90} width={90} />
+          <Image src="/shop.svg" alt="جوایز" height={90} width={90} />
 
           <h1 className="my-6 text-center text-2xl font-bold text-neutral-800">
-            Shop
+            جوایز من
           </h1>
           <p className="mb-6 text-center text-lg text-muted-foreground">
-            Spend your points on cool stuff.
+            با امتیازهایت امکانات تازه بگیر.
           </p>
 
           <Items
