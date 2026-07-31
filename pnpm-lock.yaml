@@ -75,8 +75,8 @@ importers:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       stripe:
-        specifier: ^22.3.0
-        version: 22.3.2(@types/node@25.9.5)
+        specifier: ^22.4.0
+        version: 22.4.0(@types/node@25.9.5)
       tailwind-merge:
         specifier: ^3.6.0
         version: 3.6.0
@@ -3553,8 +3553,8 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  stripe@22.3.2:
-    resolution: {integrity: sha512-O13QOvgEIQvDlTy6Ubb5kB980wpbhmoZNsgCXKILjCMZS67f+bW+6w99k3gnSi/N1lkryoj1WYdpGT5Wc5edjg==}
+  stripe@22.4.0:
+    resolution: {integrity: sha512-LVJ+tcSYeqOSnXr3i+Kz2tZ7y0crLLdP2uwD/4wccrmEVyn0g/Heo0pF7as7rxS/sOjJzrb1lxgZY0Y0Dx1pSA==}
     engines: {node: '>=18'}
     peerDependencies:
       '@types/node': '>=18'
@@ -7108,7 +7108,7 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  stripe@22.3.2(@types/node@25.9.5):
+  stripe@22.4.0(@types/node@25.9.5):
     optionalDependencies:
       '@types/node': 25.9.5
 
