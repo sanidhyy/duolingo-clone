@@ -248,7 +248,7 @@ Useful resources and dependencies that are used in Lingo.
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.3.3
 - [@types/node](https://www.npmjs.com/package/@types/node): ^25.9.1
 - [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.17
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.3
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.4
 - [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.5.4
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.0
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
