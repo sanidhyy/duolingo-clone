@@ -1,40 +1,30 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: ""
-labels: ""
-assignees: ""
+about: Something is not working as expected
+title: "[bug]: "
+labels: ["bug"]
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is.
+A short description of what went wrong.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+**To reproduce**
+1.
+2.
+3.
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+What you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Screenshots / logs**
+If useful, add a screenshot or the terminal/browser error.
 
-**Desktop (please complete the following information):**
-
-- OS: [e.g. iOS]
-- Browser [e.g. chrome, safari]
-- Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
-
-- Device: [e.g. iPhone6]
-- OS: [e.g. iOS8.1]
-- Browser [e.g. stock browser, safari]
-- Version [e.g. 22]
+**Environment**
+- OS: [e.g. Windows 11, macOS 15, Ubuntu 24.04]
+- Browser: [e.g. Chrome 128] (skip for non-browser apps)
+- Node.js: [e.g. 20.11]
+- Package manager: [npm / pnpm / yarn / bun]
+- Framework: [e.g. Next.js 14, Vite 5, CRA, vanilla HTML]
 
 **Additional context**
-Add any other context about the problem here.
+Anything else, including whether you followed a tutorial.
