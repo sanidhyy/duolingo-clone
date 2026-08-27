@@ -287,7 +287,7 @@ Useful resources and dependencies that are used in Lingo.
 - [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
 - [tsx](https://www.npmjs.com/package/tsx): ^4.23.12
 - [typescript](https://www.npmjs.com/package/typescript): ^6
-- [zustand](https://www.npmjs.com/package/zustand): ^5.0.14
+- [zustand](https://www.npmjs.com/package/zustand): ^5.0.15
 
 <!--- DEPENDENCIES_END --->
 
