@@ -30,8 +30,8 @@ importers:
         specifier: ^1.3.3
         version: 1.3.3(@types/react@19.2.18)(react@19.2.8)
       '@vercel/config':
-        specifier: ^0.6.1
-        version: 0.6.1
+        specifier: ^0.7.0
+        version: 0.7.0
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1672,8 +1672,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@vercel/config@0.6.1':
-    resolution: {integrity: sha512-t/+LQFT0zIN2U2y0fIPC3jI/Ms2OowSOIHy7yGKlrH96YIYGNNHgfx6TZGHAMvIq9ClLBeatXWf6fbKuio93cA==}
+  '@vercel/config@0.7.0':
+    resolution: {integrity: sha512-aWwF0zTnkfgn0t9/7inwyEjyY781thrgFe0PTaVwdyy0vmxZB+FF44EYIKKmUyIF6hv7HqgOSU7T0KZRnQZPWA==}
     hasBin: true
 
   '@vercel/routing-utils@6.5.0':
@@ -5014,7 +5014,7 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.12.2':
     optional: true
 
-  '@vercel/config@0.6.1':
+  '@vercel/config@0.7.0':
     dependencies:
       '@vercel/routing-utils': 6.5.0
       pretty-cache-header: 1.0.0
