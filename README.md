@@ -255,7 +255,7 @@ Useful resources and dependencies that are used in Lingo.
 - [@radix-ui/react-separator](https://www.npmjs.com/package/@radix-ui/react-separator): ^1.1.15
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.3.3
 - [@types/node](https://www.npmjs.com/package/@types/node): ^26.2.0
-- [@types/react](https://www.npmjs.com/package/@types/react): ^19.2.18
+- [@types/react](https://www.npmjs.com/package/@types/react): ^19.3.0
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.7
 - [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.7.0
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.5
@@ -274,7 +274,7 @@ Useful resources and dependencies that are used in Lingo.
 - [prettier](https://www.npmjs.com/package/prettier): ^3.9.6
 - [prettier-plugin-tailwindcss](https://www.npmjs.com/package/prettier-plugin-tailwindcss): ^0.8.0
 - [ra-data-simple-rest](https://www.npmjs.com/package/ra-data-simple-rest): ^5.15.3
-- [react](https://www.npmjs.com/package/react): ^19.2.8
+- [react](https://www.npmjs.com/package/react): ^19.3.0
 - [react-admin](https://www.npmjs.com/package/react-admin): ^5.15.1
 - [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): ^2.2.0
 - [react-confetti](https://www.npmjs.com/package/react-confetti): ^6.4.0
