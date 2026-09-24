@@ -256,7 +256,7 @@ Useful resources and dependencies that are used in Lingo.
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.3.3
 - [@types/node](https://www.npmjs.com/package/@types/node): ^26.2.0
 - [@types/react](https://www.npmjs.com/package/@types/react): ^19.3.0
-- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.2.7
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.3.0
 - [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.7.0
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.5
 - [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
@@ -278,7 +278,7 @@ Useful resources and dependencies that are used in Lingo.
 - [react-admin](https://www.npmjs.com/package/react-admin): ^5.15.1
 - [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): ^2.2.0
 - [react-confetti](https://www.npmjs.com/package/react-confetti): ^6.4.0
-- [react-dom](https://www.npmjs.com/package/react-dom): ^19.2.8
+- [react-dom](https://www.npmjs.com/package/react-dom): ^19.3.0
 - [react-use](https://www.npmjs.com/package/react-use): ^17.6.1
 - [sonner](https://www.npmjs.com/package/sonner): ^2.0.8
 - [stripe](https://www.npmjs.com/package/stripe): ^22.6.2
