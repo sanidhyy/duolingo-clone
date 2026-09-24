@@ -34,7 +34,7 @@
     "react-admin": "^5.15.1",
     "react-circular-progressbar": "^2.2.0",
     "react-confetti": "^6.4.0",
-    "react-dom": "^19.2.8",
+    "react-dom": "^19.3.0",
     "react-use": "^17.6.1",
     "sonner": "^2.0.8",
     "stripe": "^22.6.2",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@types/node": "^26.2.0",
     "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.2.7",
+    "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.5.5",
     "drizzle-kit": "^0.31.10",
     "eslint": "^9",
