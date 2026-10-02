@@ -7,6 +7,7 @@ import {
   serial,
   text,
   timestamp,
+  unique,
 } from "drizzle-orm/pg-core";
 
 import { MAX_HEARTS } from "@/constants";
@@ -107,16 +108,20 @@ export const challengeOptionsRelations = relations(
   })
 );
 
-export const challengeProgress = pgTable("challenge_progress", {
-  id: serial("id").primaryKey(),
-  userId: text("user_id").notNull(),
-  challengeId: integer("challenge_id")
-    .references(() => challenges.id, {
-      onDelete: "cascade",
-    })
-    .notNull(),
-  completed: boolean("completed").notNull().default(false),
-});
+export const challengeProgress = pgTable(
+  "challenge_progress",
+  {
+    id: serial("id").primaryKey(),
+    userId: text("user_id").notNull(),
+    challengeId: integer("challenge_id")
+      .references(() => challenges.id, {
+        onDelete: "cascade",
+      })
+      .notNull(),
+    completed: boolean("completed").notNull().default(false),
+  },
+  (t) => [unique().on(t.userId, t.challengeId)]
+);
 
 export const challengeProgressRelations = relations(
   challengeProgress,
