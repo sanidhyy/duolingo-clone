@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "format": "prettier --check --ignore-path .prettierignore .",
-    "format:fix": "prettier --write --ignore-path .prettierignore .",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
     "db:studio": "drizzle-kit studio",
     "db:push": "drizzle-kit push",
     "db:prod": "tsx ./scripts/prod.ts"
