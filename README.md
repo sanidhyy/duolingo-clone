@@ -96,6 +96,7 @@ duolingo-clone/
   |- .env.example
   |- .env/.env.local
   |- .gitignore
+  |- .prettierignore
   |- .prettierrc.json
   |- components.json
   |- constants.ts
