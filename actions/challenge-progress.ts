@@ -67,11 +67,14 @@ export const upsertChallengeProgress = async (challengeId: number) => {
     return;
   }
 
-  await db.insert(challengeProgress).values({
-    challengeId,
-    userId,
-    completed: true,
-  });
+  await db
+    .insert(challengeProgress)
+    .values({
+      challengeId,
+      userId,
+      completed: true,
+    })
+    .onConflictDoNothing();
 
   await db
     .update(userProgress)
