@@ -1,7 +1,7 @@
 "use server";
 
 import { auth } from "@clerk/nextjs/server";
-import { and, eq, sql } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
 import { MAX_HEARTS } from "@/constants";
@@ -79,7 +79,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
   await db
     .update(userProgress)
     .set({
-      points: sql`${userProgress.points} + 10`,
+      points: currentUserProgress.points + 10,
     })
     .where(eq(userProgress.userId, userId));
 
