@@ -25,7 +25,7 @@ export const Quests = ({ points }: QuestsProps) => {
           const progress = (points / quest.value) * 100;
 
           return (
-            <div
+            <li
               className="flex w-full items-center gap-x-3 pb-4"
               key={quest.title}
             >
@@ -38,7 +38,7 @@ export const Quests = ({ points }: QuestsProps) => {
 
                 <Progress value={progress} className="h-2" />
               </div>
-            </div>
+            </li>
           );
         })}
       </ul>
