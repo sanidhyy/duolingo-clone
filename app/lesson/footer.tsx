@@ -1,8 +1,11 @@
+"use client";
+
 import { CheckCircle, XCircle } from "lucide-react";
 import { useKey, useMedia } from "react-use";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 type FooterProps = {
   onCheck: () => void;
@@ -17,6 +20,8 @@ export const Footer = ({
   disabled,
   lessonId,
 }: FooterProps) => {
+  const router = useRouter();
+
   useKey("Enter", onCheck, {}, [onCheck]);
   const isMobile = useMedia("(max-width: 1024px)");
 
@@ -47,7 +52,7 @@ export const Footer = ({
           <Button
             variant="default"
             size={isMobile ? "sm" : "lg"}
-            onClick={() => (window.location.href = `/lesson/${lessonId}`)}
+            onClick={() => router.push(`/lesson/${lessonId}`)}
           >
             Practice again
           </Button>
