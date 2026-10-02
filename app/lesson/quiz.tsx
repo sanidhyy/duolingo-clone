@@ -125,7 +125,9 @@ export const Quiz = ({
 
             void correctControls.play();
             setStatus("correct");
-            setPercentage((prev) => prev + 100 / challenges.length);
+            setPercentage((prev) =>
+              challenges.length === 0 ? prev : prev + 100 / challenges.length
+            );
 
             // This is a practice
             if (initialPercentage === 100) {
