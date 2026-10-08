@@ -15,7 +15,7 @@
     "db:prod": "tsx ./scripts/prod.ts"
   },
   "dependencies": {
-    "@clerk/nextjs": "^7.9.4",
+    "@clerk/nextjs": "^7.9.10",
     "@neondatabase/serverless": "^1.2.0",
     "@radix-ui/react-avatar": "^1.2.6",
     "@radix-ui/react-dialog": "^1.1.23",
