@@ -257,7 +257,7 @@ Useful resources and dependencies that are used in Lingo.
 - [@radix-ui/react-progress](https://www.npmjs.com/package/@radix-ui/react-progress): ^1.1.16
 - [@radix-ui/react-separator](https://www.npmjs.com/package/@radix-ui/react-separator): ^1.2.0
 - [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.5.0
-- [@types/node](https://www.npmjs.com/package/@types/node): ^26.2.0
+- [@types/node](https://www.npmjs.com/package/@types/node): ^26.6.5
 - [@types/react](https://www.npmjs.com/package/@types/react): ^19.3.0
 - [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): ^19.3.0
 - [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.13.0
