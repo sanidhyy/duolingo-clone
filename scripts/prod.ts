@@ -1494,6 +1494,406 @@ const frenchCurriculum: {
   },
 ];
 
+const createA2Lesson = (
+  title: string,
+  first: [string, string, string, string],
+  second: [string, string, string, string]
+) => ({
+  title,
+  exercises: [
+    select(first[0], first[1], [first[2], first[3]]),
+    assist(second[0], second[1], [second[2], second[3]]),
+  ],
+});
+
+frenchCurriculum[0].lessons.push(
+  createA2Lesson(
+    "Talking about your daily routine",
+    [
+      "Choose the natural translation: I get dressed before having breakfast.",
+      "Je m'habille avant de prendre le petit-déjeuner.",
+      "Je me réveille avant de dormir.",
+      "Je me couche avant de me lever.",
+    ],
+    [
+      "Je me dépêche parce que je suis déjà en retard.",
+      "I hurry because I'm already late.",
+      "I rest because I arrived early.",
+      "I get ready because I have plenty of time.",
+    ]
+  ),
+  createA2Lesson(
+    "Family and relationships",
+    [
+      "Complete: “La fille de mon oncle est ma ___.”",
+      "cousine",
+      "nièce",
+      "belle-mère",
+    ],
+    [
+      "Même si nous avons des caractères différents, nous nous entendons bien.",
+      "Even though we have different personalities, we get along well.",
+      "We have the same personality, so we never speak.",
+      "We get along because we live in different countries.",
+    ]
+  ),
+  createA2Lesson(
+    "Work and professions",
+    [
+      "Choose the natural translation: He has been looking for a job since March.",
+      "Il cherche un emploi depuis le mois de mars.",
+      "Il a cherché un emploi pendant le mois de mars seulement.",
+      "Il cherchera un emploi avant le mois de mars.",
+    ],
+    [
+      "Elle est responsable de l'accueil des nouveaux clients.",
+      "She is responsible for welcoming new customers.",
+      "She is waiting for a new job offer from her customers.",
+      "She has recently become a customer service manager.",
+    ]
+  ),
+  createA2Lesson(
+    "Education and learning",
+    [
+      "Complete: “Je révise régulièrement ___ mieux retenir le vocabulaire.”",
+      "pour",
+      "depuis",
+      "malgré",
+    ],
+    [
+      "Il a échoué à l'examen, mais il compte le repasser le mois prochain.",
+      "He failed the exam, but plans to retake it next month.",
+      "He passed the exam and will teach it next month.",
+      "He is taking the exam for the first time next month.",
+    ]
+  )
+);
+
+frenchCurriculum[1].lessons.push(
+  createA2Lesson(
+    "Describing a house",
+    [
+      "Choose the natural translation: The flat is bright and has a balcony.",
+      "L'appartement est lumineux et possède un balcon.",
+      "La maison est bruyante et donne sur un garage.",
+      "Le balcon est petit, mais l'appartement est sombre.",
+    ],
+    [
+      "La cuisine est assez grande pour qu'on puisse y manger à quatre.",
+      "The kitchen is large enough for four of us to eat in it.",
+      "The kitchen is too small for four people to cook.",
+      "We have to eat outside because there is no kitchen.",
+    ]
+  ),
+  createA2Lesson(
+    "Describing objects and clothes",
+    [
+      "Choose the correct agreement: “Elle porte une robe ___.”",
+      "bleu foncé",
+      "bleue foncée",
+      "bleus foncés",
+    ],
+    [
+      "Je cherche un manteau imperméable qui ne soit pas trop cher.",
+      "I'm looking for a waterproof coat that isn't too expensive.",
+      "I'm looking for a cheap coat that is not warm.",
+      "I bought a waterproof coat that was very expensive.",
+    ]
+  ),
+  createA2Lesson(
+    "Comparing people and things",
+    [
+      "Complete: “Ce quartier est ___ calme que le centre-ville.”",
+      "moins",
+      "aussi de",
+      "le plus de",
+    ],
+    [
+      "Le train est aussi rapide que la voiture aux heures de pointe.",
+      "The train is as fast as the car during rush hour.",
+      "The train is slower than the car at every time of day.",
+      "The car is as expensive as the train ticket.",
+    ]
+  ),
+  createA2Lesson(
+    "Preferences and simple opinions",
+    [
+      "Choose the natural translation: I prefer living in the countryside.",
+      "Je préfère vivre à la campagne.",
+      "Je préfère la campagne vivre.",
+      "Je préfère vivre dans la campagne de.",
+    ],
+    [
+      "À mon avis, les marchés locaux sont plus agréables que les grands magasins.",
+      "In my opinion, local markets are more pleasant than department stores.",
+      "I think department stores are always cheaper than local markets.",
+      "In my opinion, local markets only sell clothes.",
+    ]
+  )
+);
+
+frenchCurriculum[2].lessons.push(
+  createA2Lesson(
+    "Making polite requests",
+    [
+      "Choose the polite request: Could you repeat that more slowly?",
+      "Pourriez-vous répéter plus lentement ?",
+      "Répète ça immédiatement !",
+      "Tu répètes toujours trop vite.",
+    ],
+    [
+      "Est-ce que vous pourriez m'envoyer l'adresse par courriel ?",
+      "Could you send me the address by email?",
+      "Would you like to email me when you arrive?",
+      "I sent you the address before you emailed me.",
+    ]
+  ),
+  createA2Lesson(
+    "Making and changing appointments",
+    [
+      "Choose the natural translation: Are you available on Thursday afternoon?",
+      "Êtes-vous libre jeudi après-midi ?",
+      "Avez-vous quitté jeudi après-midi ?",
+      "Est-ce que jeudi après-midi vous convient hier ?",
+    ],
+    [
+      "Je vais devoir reporter notre rendez-vous à la semaine prochaine.",
+      "I'll have to postpone our appointment until next week.",
+      "I would like to cancel all my appointments next week.",
+      "Our appointment was moved from next week to yesterday.",
+    ]
+  ),
+  createA2Lesson(
+    "Inviting and responding",
+    [
+      "Accept an invitation naturally: “Would you like to come over for dinner?”",
+      "Avec plaisir, merci pour l'invitation !",
+      "Je suis désolé, j'ai déjà mangé demain.",
+      "Je voudrais une table pour deux personnes.",
+    ],
+    [
+      "Merci d'avoir pensé à moi, mais je ne pourrai pas venir ce soir.",
+      "Thanks for thinking of me, but I won't be able to come tonight.",
+      "Thank you for coming; I won't be here tonight.",
+      "I thought about you, but I arrived this evening.",
+    ]
+  ),
+  createA2Lesson(
+    "Asking for advice",
+    [
+      "Choose the natural way to ask for advice: What would you do in my place?",
+      "Qu'est-ce que tu ferais à ma place ?",
+      "Qu'est-ce que tu as fait chez moi ?",
+      "Qu'est-ce que tu faisais à ma place hier ?",
+    ],
+    [
+      "À ta place, je demanderais un délai supplémentaire.",
+      "If I were you, I'd ask for an extension.",
+      "In your place, I asked for a new appointment.",
+      "You should extend the deadline before asking.",
+    ]
+  )
+);
+
+const additionalFrenchA2Units = [
+  {
+    title: "A2 · Vocabulaire et vie quotidienne",
+    description:
+      "Use practical vocabulary for daily routines, relationships, food, shopping, and health.",
+    lessons: [
+      createA2Lesson(
+        "Daily routines and family",
+        [
+          "Choose the natural translation: We take turns doing the housework.",
+          "Nous faisons le ménage à tour de rôle.",
+          "Nous faisons les courses à la maison.",
+          "Nous avons l'habitude de déménager chaque semaine.",
+        ],
+        [
+          "Mon frère s'occupe souvent de préparer le dîner.",
+          "My brother often takes care of preparing dinner.",
+          "My brother usually eats dinner before preparing it.",
+          "My brother is looking after the restaurant this evening.",
+        ]
+      ),
+      createA2Lesson(
+        "Food and restaurants",
+        [
+          "Choose the natural translation: Is this dish suitable for vegetarians?",
+          "Ce plat convient-il aux végétariens ?",
+          "Est-ce que les végétariens ont déjà payé l'addition ?",
+          "Cette assiette est-elle à côté du restaurant ?",
+        ],
+        [
+          "Je prendrai le plat du jour, mais sans fromage, s'il vous plaît.",
+          "I'll have the dish of the day, but without cheese, please.",
+          "I took the day's menu and paid for the cheese.",
+          "I would like the cheese before looking at the menu.",
+        ]
+      ),
+      createA2Lesson(
+        "Shopping and housing",
+        [
+          "Complete: “Le loyer comprend les charges, ___ l'électricité.”",
+          "sauf",
+          "depuis",
+          "pendant",
+        ],
+        [
+          "Pourriez-vous me dire si l'appartement est encore disponible ?",
+          "Could you tell me whether the apartment is still available?",
+          "Could you tell me how much the furniture costs?",
+          "Can you confirm that the apartment has already been rented?",
+        ]
+      ),
+      createA2Lesson(
+        "Transport and travel",
+        [
+          "Choose the natural translation: We missed our connection because the train was delayed.",
+          "Nous avons manqué notre correspondance parce que le train avait du retard.",
+          "Nous avons raté le train parce que notre hôtel était en retard.",
+          "Nous avons pris une correspondance avant le retard du train.",
+        ],
+        [
+          "Le billet est valable toute la journée, mais il faut le composter avant de monter.",
+          "The ticket is valid all day, but you need to validate it before boarding.",
+          "The ticket is valid only after you get off the train.",
+          "You can buy a ticket all day once you have boarded.",
+        ]
+      ),
+      createA2Lesson(
+        "Health and well-being",
+        [
+          "Choose the natural translation: I've been sleeping badly for several days.",
+          "Je dors mal depuis plusieurs jours.",
+          "J'ai dormi mal pendant plusieurs jours demain.",
+          "Je dormirai bien depuis plusieurs jours.",
+        ],
+        [
+          "Le pharmacien m'a conseillé de boire davantage d'eau et de me reposer.",
+          "The pharmacist advised me to drink more water and rest.",
+          "The doctor told me to stop drinking water before resting.",
+          "The pharmacist asked me to come back after drinking the medicine.",
+        ]
+      ),
+      createA2Lesson(
+        "Weather and emotions",
+        [
+          "Choose the natural translation: Despite the rain, we were delighted with our trip.",
+          "Malgré la pluie, nous avons été ravis de notre voyage.",
+          "À cause du voyage, il a plu et nous étions en retard.",
+          "Nous étions ravis que le voyage soit annulé demain.",
+        ],
+        [
+          "Je suis un peu déçu parce que la visite guidée a été annulée.",
+          "I'm a little disappointed because the guided tour was cancelled.",
+          "I'm surprised that the guide has already booked the tour.",
+          "I'm disappointed that the tour will be longer than expected.",
+        ]
+      ),
+    ],
+  },
+  {
+    title: "A2 · Décrire, comparer et communiquer",
+    description:
+      "Describe experiences clearly, compare options, make plans, and handle everyday conversations.",
+    lessons: [
+      createA2Lesson(
+        "Describing people and character",
+        [
+          "Choose the natural translation: He is reliable, although he can be a little stubborn.",
+          "Il est fiable, même s'il peut être un peu têtu.",
+          "Il est têtu parce qu'il est toujours très fiable.",
+          "Il était fiable avant de devenir un peu patient.",
+        ],
+        [
+          "Elle a tendance à s'inquiéter, mais elle trouve toujours une solution.",
+          "She tends to worry, but she always finds a solution.",
+          "She avoids solutions because she never worries.",
+          "She found a solution before she started worrying.",
+        ]
+      ),
+      createA2Lesson(
+        "Describing places and objects",
+        [
+          "Complete: “La bibliothèque se trouve dans un bâtiment ___ du XIXe siècle.”",
+          "ancien",
+          "ancienne",
+          "anciennement",
+        ],
+        [
+          "La place est bordée de cafés et donne sur la rivière.",
+          "The square is lined with cafés and overlooks the river.",
+          "The river is lined with squares and cafés.",
+          "The café is on the other side of the square from the river.",
+        ]
+      ),
+      createA2Lesson(
+        "Comparing choices",
+        [
+          "Choose the natural translation: This route is shorter, but the other one is safer.",
+          "Cet itinéraire est plus court, mais l'autre est plus sûr.",
+          "Cet itinéraire est le plus court, donc l'autre est plus court aussi.",
+          "L'autre itinéraire est moins sûr parce qu'il est plus long que celui-ci.",
+        ],
+        [
+          "Le billet le moins cher n'est pas forcément le plus pratique.",
+          "The cheapest ticket is not necessarily the most convenient.",
+          "The most convenient ticket is always the cheapest.",
+          "The cheapest ticket is less practical than every other ticket.",
+        ]
+      ),
+      createA2Lesson(
+        "Talking about past experiences",
+        [
+          "Choose the correct contrast: It was sunny when we arrived, but it started raining later.",
+          "Il faisait beau quand nous sommes arrivés, mais il s'est mis à pleuvoir ensuite.",
+          "Il a fait beau quand nous arrivions, mais il pleuvait ensuite demain.",
+          "Il faisait beau après que nous étions partis et il pleuvra ensuite.",
+        ],
+        [
+          "Pendant que je visitais le musée, mon ami a acheté des billets pour le concert.",
+          "While I was visiting the museum, my friend bought tickets for the concert.",
+          "After the concert, my friend visited the museum while I bought tickets.",
+          "My friend used to buy concert tickets while I visited the museum.",
+        ]
+      ),
+      createA2Lesson(
+        "Making plans and invitations",
+        [
+          "Choose the natural translation: We are planning to spend the weekend by the sea.",
+          "Nous avons prévu de passer le week-end au bord de la mer.",
+          "Nous prévoyons que le week-end était au bord de la mer.",
+          "Nous avions passé le week-end avant de prévoir la mer.",
+        ],
+        [
+          "Si tu es libre samedi, on pourrait visiter l'exposition ensemble.",
+          "If you're free on Saturday, we could visit the exhibition together.",
+          "You were free on Saturday when we visited the exhibition.",
+          "The exhibition will be free if we visit it next Saturday.",
+        ]
+      ),
+      createA2Lesson(
+        "Everyday conversations and opinions",
+        [
+          "Choose the natural translation: I agree with you up to a point.",
+          "Je suis d'accord avec toi jusqu'à un certain point.",
+          "Je suis d'accord avec toi pendant un certain temps.",
+          "Je te donne mon accord pour partir à un autre endroit.",
+        ],
+        [
+          "Je ne suis pas convaincu, car cette solution risque de coûter trop cher.",
+          "I'm not convinced, because this solution could cost too much.",
+          "I'm convinced that this solution will cost less than expected.",
+          "This solution is too expensive, so I have already paid for it.",
+        ]
+      ),
+    ],
+  },
+];
+
+frenchCurriculum.splice(3, 0, ...additionalFrenchA2Units);
+
 const spanishCurriculum: {
   title: string;
   description: string;
