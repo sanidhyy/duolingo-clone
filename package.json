@@ -40,7 +40,7 @@
     "stripe": "^23.1.0",
     "tailwind-merge": "^3.7.0",
     "tailwindcss-animate": "^1.0.7",
-    "zustand": "^5.0.15"
+    "zustand": "^5.1.0"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
