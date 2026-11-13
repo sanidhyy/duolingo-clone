@@ -268,7 +268,7 @@ Useful resources and dependencies that are used in Lingo.
 - [drizzle-kit](https://www.npmjs.com/package/drizzle-kit): ^0.31.11
 - [drizzle-orm](https://www.npmjs.com/package/drizzle-orm): ^0.45.4
 - [eslint](https://www.npmjs.com/package/eslint): ^9
-- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.3.6
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.4.5
 - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier): ^10.1.8
 - [lucide-react](https://www.npmjs.com/package/lucide-react): ^1.52.0
 - [next](https://www.npmjs.com/package/next): ^16.4.3
