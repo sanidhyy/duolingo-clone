@@ -5,7 +5,10 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'quarterly' # every 3 months
+    allow:
+      - dependency-type: 'direct'
+    versioning-strategy: 'increase'
